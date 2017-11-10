@@ -1,0 +1,20 @@
+#!/bin/bash
+
+BACKUP_NAME=$1
+
+pg-backup
+
+if [ -z "$BACKUP_NAME" ]; then
+    echo "Uaseges: $0 <DB file name in backup dir>"
+    exit -1
+fi
+
+if [ ! -f "$PGCONF/backup/$BACKUP_NAME" ]; then
+    echo "File $BACKUP_NAME not found"
+    exit -1
+fi
+
+#/sbin/setuser system dropdb $PG_DB_NAME
+#/sbin/setuser system createdb $PG_DB_NAME
+
+pg_restore -Fc -c -d $PG_DB_NAME "$PGCONF/backup/$BACKUP_NAME"
