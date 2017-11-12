@@ -1,6 +1,6 @@
 FROM javister-docker-docker.bintray.io/javister/javister-docker-base:1.0
 MAINTAINER Viktor Verbitsky <vektory79@gmail.com>
-LABEL java=8
+LABEL postgresql=9.5
 
 COPY files /
 
