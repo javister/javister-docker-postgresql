@@ -7,6 +7,8 @@ ARG PG_MJR="95"
 LABEL postgresql=${PG_MAJOR}
 
 ENV HOME="/root" \
+    PG_MAJOR=${PG_MAJOR} \
+    PG_MJR=${PG_MJR} \
     PGCONF="/config/postgres" \
     PGDATA="/config/postgres/databases" \
     PG_DB_NAME="system" \
