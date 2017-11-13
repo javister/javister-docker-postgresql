@@ -25,4 +25,7 @@ RUN . /usr/local/sbin/yum-proxy && \
     yum-clean && \
     chmod --recursive --changes +x /etc/my_init.d/*.sh /etc/service /usr/local/bin
 
+HEALTHCHECK --interval=5s --timeout=3s --start-period=1m \
+    CMD PGPASSWORD=postgres psql --dbname=${PG_DB_NAME} --host=$(getip) --port=5432 --username=system --command="select 1;" || exit 1
+
 EXPOSE 5432
