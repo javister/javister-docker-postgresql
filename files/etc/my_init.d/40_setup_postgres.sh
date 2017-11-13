@@ -43,13 +43,15 @@ EOWARN
     { echo; echo "host all all 0.0.0.0/0 $authMethod"; } >> "${PGDATA}/pg_hba.conf"
     set_listen_addresses ''
 
-    setuser system postgres >/dev/null 2>&1 &
+    sync
+
+    setuser system postgres &
     pid="$!"
     
     wait4tcp $(getip) 5432
 
-    setuser system createdb ${PG_DB_NAME} >/dev/null 2>&1
-    setuser system psql --command "ALTER USER system WITH SUPERUSER $pass;"  >/dev/null 2>&1
+    setuser system createdb ${PG_DB_NAME}
+    setuser system psql --dbname=${PG_DB_NAME} --command "ALTER USER system WITH SUPERUSER ${pass};"
     
     setuser system pg_ctl stop -w
 
