@@ -57,7 +57,10 @@ EOWARN
 
     set_listen_addresses '*'
 
-    sed -ri "s/^log_destination = 'stderr'(.*)$/log_destination = 'stderr,syslog'\1/" "${PGDATA}/postgresql.conf"
+    sed -ri "s/^#?(log_destination\s*=\s*)\S+(\s+.*)$/\1'stderr,syslog'\2/" "${PGDATA}/postgresql.conf"
+    sed -ri "s/^#?(fsync\s*=\s*)\S+(\s+.*)$/\1${PG_FSYNC}\2/" "${PGDATA}/postgresql.conf"
+    sed -ri "s/^#?(synchronous_commit\s*=\s*)\S+(\s+.*)$/\1${PG_SYNCHRONOUS_COMMIT}\2/" "${PGDATA}/postgresql.conf"
+
     sync
 fi
 

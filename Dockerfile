@@ -14,6 +14,8 @@ ENV HOME="/root" \
     PG_DB_NAME="system" \
     PGSETUP_INITDB_OPTIONS="--locale=ru_RU.UTF-8" \
     PGENGINE="/usr/pgsql-${PG_MAJOR}/bin" \
+    PG_FSYNC="on" \
+    PG_SYNCHRONOUS_COMMIT="on" \
     PATH="/usr/pgsql-${PG_MAJOR}/bin:${PATH}" \
     RPMLIST="postgresql${PG_MJR} postgresql${PG_MJR}-server postgresql95-contrib"
 
