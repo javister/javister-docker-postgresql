@@ -2,7 +2,7 @@
 set -e
 
 set_listen_addresses() {
-	sedEscapedValue="$(echo "*" | sed 's/[\/&]/\\&/g')"
+	sedEscapedValue="$(echo "$1" | sed 's/[\/&]/\\&/g')"
 	sed -ri "s/^#?(listen_addresses\s*=\s*)\S+/\1'$sedEscapedValue'/" "${PGDATA}/postgresql.conf"
 }
 
@@ -41,14 +41,14 @@ EOWARN
     fi
     
     { echo; echo "host all all 0.0.0.0/0 $authMethod"; } >> "${PGDATA}/pg_hba.conf"
-    set_listen_addresses ''
+    set_listen_addresses '127.0.0.1'
 
     sync
 
     setuser system postgres &
     pid="$!"
     
-    wait4tcp $(getip) 5432
+    wait4tcp 127.0.0.1 5432
 
     setuser system createdb ${PG_DB_NAME}
     setuser system psql --dbname=${PG_DB_NAME} --command "ALTER USER system WITH SUPERUSER ${pass};"

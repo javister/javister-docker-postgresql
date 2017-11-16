@@ -25,4 +25,4 @@ sync
 
 GID="$(id -g)"
 
-docker run -it --name postgresql --env PUID=$UID --env PGID=${GID} -p 5433:5432 --rm ${PROXY_ARGS} -v ${WORK_DIR}:/config/postgres:rw -e POSTGRES_PASSWORD=postgres javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5 $@
+docker run -it --name postgresql -p 5432:5432 --env PUID=$UID --env PGID=${GID} --rm ${PROXY_ARGS} -v ${WORK_DIR}:/config/postgres:rw -e POSTGRES_PASSWORD=postgres javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5 $@
