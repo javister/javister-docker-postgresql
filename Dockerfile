@@ -21,7 +21,7 @@ ENV HOME="/root" \
 
 COPY files /
 
-RUN . /usr/local/sbin/yum-proxy && \
+RUN . /usr/local/bin/yum-proxy && \
     yum install -y https://download.postgresql.org/pub/repos/yum/${PG_MAJOR}/redhat/rhel-7-x86_64/pgdg-centos${PG_MJR}-${PG_MAJOR}-3.noarch.rpm && \
     yum-install && \
     yum-clean && \
