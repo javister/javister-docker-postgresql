@@ -23,7 +23,7 @@ if [ ! -d  "${PGDATA}" ]; then
         authMethod=md5
     else
         # The - option suppresses leading tabs but *not* spaces. :)
-        cat >&2 <<-'EOWARN'
+        MESSAGE=$(cat <<-'EOWARN'
 ****************************************************
 WARNING: No password has been set for the database.
 This will allow anyone with access to the
@@ -35,6 +35,8 @@ Use "-e POSTGRES_PASSWORD=password" to set
 it in "docker run".
 ****************************************************
 EOWARN
+)
+        mwarn "${MESSAGE}"
 
         pass=
         authMethod=trust
