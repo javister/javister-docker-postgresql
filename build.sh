@@ -45,14 +45,12 @@ EOF
     docker build \
         --tag ${IMAGE_TAG}:latest \
         --tag ${IMAGE_TAG}:${VERSION} \
-        --tag ${IMAGE_TAG}:${VERSION}-${DATE} \
         ${PROXY_ARGS} \
         $@ \
         .
 
     [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:latest
     [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:${VERSION}
-    [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:${VERSION}-${DATE}
 }
 
 CURRENT_DIR=$(pwd)
