@@ -1,9 +1,11 @@
 #!/bin/bash -e
 
+. ./config.properties
+
 function build() {
-    local release
-    release="dry"
-    doPull="no"
+    local release="dry"
+    local doPull=""
+    local downstream="no"
 
     while getopts ":rph" opt; do
         case $opt in
@@ -11,7 +13,10 @@ function build() {
                 release="release"
                 ;;
             p)
-                doPull="yes"
+                doPull="--pull"
+                ;;
+            d)
+                downstream="yes"
                 ;;
             h)
                 cat <<EOF
@@ -19,6 +24,7 @@ usage: build [OPTION]... [-- [docker build opts]]
   -h        show this help.
   -r        push resulting image.
   -p        don't pull base image.
+  -d        trigger downstream builds on Travis CI
 EOF
                 return 0;
                 ;;
@@ -34,30 +40,26 @@ EOF
     done
     shift $((OPTIND-1))
 
-    VERSION=9.5
-    DATE=$(date +"%Y-%m-%d")
-
-    IMAGE_TAG="javister-docker-docker.bintray.io/javister/javister-docker-postgresql"
     PROXY_ARGS="--build-arg http_proxy=${http_proxy} \
                 --build-arg no_proxy=${no_proxy}"
-    [ "${doPull}" == "yes" ] && docker pull javister-docker-docker.bintray.io/javister/javister-docker-base:1.0
 
     docker build \
+        ${doPull} \
         --tag ${IMAGE_TAG}:latest \
         --tag ${IMAGE_TAG}:${VERSION} \
         ${PROXY_ARGS} \
         $@ \
         .
 
-    [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:latest
-    [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:${VERSION}
+    [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:latest || true
+    [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:${VERSION} || true
+
+    if [ "${downstream}" == "yes" ]; then
+        while read downstream; do
+            minfo "*** Trigger downstream build ${downstream}"
+        done <downstream.txt
+    fi
 }
-
-CURRENT_DIR=$(pwd)
-
-if [ -d ${CURRENT_DIR}/tmp ]; then
-    rm -rf ${CURRENT_DIR}/tmp
-fi
 
 trap "exit 1" INT TERM QUIT
 
