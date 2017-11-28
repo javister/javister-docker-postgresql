@@ -7,7 +7,7 @@ function build() {
     local doPull=""
     local downstream="no"
 
-    while getopts ":rph" opt; do
+    while getopts ":rphd" opt; do
         case $opt in
             r)
                 release="release"
@@ -55,9 +55,23 @@ EOF
     [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:${VERSION} || true
 
     if [ "${downstream}" == "yes" ]; then
-        while read downstream; do
-            minfo "*** Trigger downstream build ${downstream}"
-        done <downstream.txt
+        while read -u 10 repo; do
+            echo "*** Trigger downstream build ${repo}"
+            URL=$(echo "${repo}" | sed -r "s/([0-9a-z_-]+).([0-9a-z_-]+)/\\1%2F\\2/g")
+
+            body='{
+            "request": {
+            "branch":"master"
+            }}'
+
+            curl -s -X POST \
+               -H "Content-Type: application/json" \
+               -H "Accept: application/json" \
+               -H "Travis-API-Version: 3" \
+               -H "Authorization: token ${TRAVIS_TOKEN}" \
+               -d "$body" \
+               https://api.travis-ci.org/repo/${URL}/requests
+        done 10<downstream.txt
     fi
 }
 

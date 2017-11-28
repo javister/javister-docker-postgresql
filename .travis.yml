@@ -8,7 +8,7 @@ addons:
 env:
   global:
     - REGISTRY_USER=vektory79
-    - secure: H0uilwqxyl1gqbRO9AAlmpNpNkuLjIonv+saU2I71l6yfzdRKDrySW8XB3GsDmK/Gsl6mcEG//9TNJNvO7rc73/TXoU/kpKiVYE9MWqOsBpjoBfOaw+CBgDHwBx/hBZrabGAQt7YSGKUx2E4yqaE3k97raZx5oLxUV47xG7GDlhYtg86pb6rkv8WxLL19oYJoncvdc/wQRlCgDrfpGkbWd7cODsk2TAPu+dUrZ5CC0HXdIGWwxtOLQwY6tAg4xh3H9WcBqzh4y4CbBc6SXvJ6CSfxj1m6cdSbHJXJHUr1PfpIIBQrW9dIZrRg1e8i3Nw5+gPHbNcalfST2f0tfwAinsalEQ8Xbl5GXoXs9qYvBBSPUg1Tu7OGyz0rjg4dX+5X6lvuJQ+t6PIaWld8hLhqIldGiBdrVGeN2CR4XrX/bbUwrleIKy4qld59r4IsfRCaqmOHrTwTXCE5uXJmiXUd0znckdNXJ6pmI8Me3bGxd7zma6tm0rslrLuaavsHQKcAfeFcdpCwkgxq3Ln2hh5yIsQQUQO00uIHGySeOMzMM6YPSu2c7J/xB8weCkgLkzfKhoOrdKZU9NOH3MN8nykEekCQqlVDTpTGW/HhJcBvOLz8K3eNP7AqcpPnGSrrp8XPIio35pdKMTgZLSvGzn9GBKj/C+mRWyqPa31x4aN3mk=
+    - secure: cOEY80cD02KzmMwAevGlY/nCEYASVwQ/LFrDlqo+Anq/8Mlwj/Y40i2I678T2uvSfkADUMJF+Fx1obaOgIVErFMjSOt8fvGwCvHv/mPt9q5v8Pg3iWRXLTGcUtuUZTUYr7zsGR2Qzu5mcXd/iaorkJXLGQl01Hmp8IjEwLaft+MRCRt2/6UOLvCpuSNoSmxMEoo0bobyb3oLNgqgo+7nRq9sxo+VpQ7hQi4mIVOHwCXkPOzQdbDiQJc3kjFbGGEJzmtCuV970gJXZQ2FJgZvE8oBe9alxPkSzQFDbSRjznuPa8BwQDdowbM1R2hAKkbmRcP35HzisoIWb60J1Hf967aqdkSUCnGXElNIcABqKQC2MpgFw4a4QEX/LSrvRqaS7cHHftEWliu6V4QGpy7JrYXFSsQJpypjDWgHW0e9nAGxwmZsyNjARloZLN+nesMqqNOpuW3SLfLxZFo0cDynE6tYpQlBQUxwFKQXS/igBkEFAsAMK/X2nqtY6K5s1o7PV8w2abEbb+cCIAtBnSU/B3CgF2yGy4eGBc8TRUCIbDL1RXMfY2gdK/c7X/coyiz6RBDbGZyubycoCSzl4Uao2v/9l3UtfnbkG2Nbo8/02h96EBwkRCKZNmdbxA25aZN9WPAW+QdRhjUA9A2xmUmDkLUtDHgFov8jZ00KxAkRR0A=
 script:
   - ./build.sh -p
 
@@ -19,6 +19,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: ./build.sh -r
+  script: ./build.sh -rd
   on:
     branch: master
