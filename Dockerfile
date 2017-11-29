@@ -12,12 +12,12 @@ ENV HOME="/root" \
     PGCONF="/config/postgres" \
     PGDATA="/config/postgres/databases" \
     PG_DB_NAME="system" \
-    PGSETUP_INITDB_OPTIONS="--locale=ru_RU.UTF-8" \
+    PGSETUP_INITDB_OPTIONS="--locale=$LANG" \
     PGENGINE="/usr/pgsql-${PG_MAJOR}/bin" \
     PG_FSYNC="on" \
     PG_SYNCHRONOUS_COMMIT="on" \
     PATH="/usr/pgsql-${PG_MAJOR}/bin:${PATH}" \
-    RPMLIST="postgresql${PG_MJR} postgresql${PG_MJR}-server postgresql95-contrib"
+    RPMLIST="postgresql${PG_MJR} postgresql${PG_MJR}-server postgresql${PG_MJR}-contrib"
 
 COPY files /
 
