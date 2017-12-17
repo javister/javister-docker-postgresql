@@ -17,4 +17,4 @@ fi
 #/sbin/setuser system dropdb $PG_DB_NAME
 #/sbin/setuser system createdb $PG_DB_NAME
 
-pg_restore -Fc -c -d $PG_DB_NAME "$PGCONF/backup/$BACKUP_NAME"
+setuser system pg_restore -Fc -c -d $PG_DB_NAME "$PGCONF/backup/$BACKUP_NAME"
