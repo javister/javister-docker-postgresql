@@ -6,4 +6,4 @@ BACKUP_NAME=$1
 
 echo "Backup to $BACKUP_NAME"
 
-/sbin/setuser system pg_dump -Fc $PG_DB_NAME > "$PGCONF/backup/$BACKUP_NAME"
+setuser system pg_dump -Fc $PG_DB_NAME > "$PGCONF/backup/$BACKUP_NAME"
