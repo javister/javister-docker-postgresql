@@ -14,7 +14,7 @@ if [ ! -f "$PGCONF/backup/$BACKUP_NAME" ]; then
     exit -1
 fi
 
-#/sbin/setuser system dropdb $PG_DB_NAME
-#/sbin/setuser system createdb $PG_DB_NAME
+setuser system dropdb $PG_DB_NAME
+setuser system createdb $PG_DB_NAME
 
 setuser system pg_restore -Fc -c -d $PG_DB_NAME "$PGCONF/backup/$BACKUP_NAME"
