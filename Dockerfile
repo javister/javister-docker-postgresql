@@ -1,28 +1,26 @@
-FROM javister-docker-docker.bintray.io/javister/javister-docker-base:1.0
+FROM javister-docker-docker.bintray.io/javister/javister-docker-base:1.1
 MAINTAINER Viktor Verbitsky <vektory79@gmail.com>
 
-ARG PG_MAJOR="9.5"
-ARG PG_MJR="95"
+ARG PG_VERSION="11"
 
-LABEL postgresql=${PG_MAJOR}
+LABEL postgresql=${PG_VERSION}
 
 ENV HOME="/root" \
-    PG_MAJOR=${PG_MAJOR} \
-    PG_MJR=${PG_MJR} \
+    PG_VERSION=${PG_VERSION} \
     PGCONF="/config/postgres" \
     PGDATA="/config/postgres/databases" \
     PG_DB_NAME="system" \
     PGSETUP_INITDB_OPTIONS="--locale=$LANG" \
-    PGENGINE="/usr/pgsql-${PG_MAJOR}/bin" \
+    PGENGINE="/usr/pgsql-${PG_VERSION}/bin" \
     PG_FSYNC="on" \
     PG_SYNCHRONOUS_COMMIT="on" \
-    PATH="/usr/pgsql-${PG_MAJOR}/bin:${PATH}" \
-    RPMLIST="postgresql${PG_MJR} postgresql${PG_MJR}-server postgresql${PG_MJR}-contrib"
+    PATH="/usr/pgsql-${PG_VERSION}/bin:${PATH}" \
+    RPMLIST="postgresql${PG_VERSION} postgresql${PG_VERSION}-server postgresql${PG_VERSION}-contrib"
 
 COPY files /
 
 RUN . /usr/local/bin/yum-proxy && \
-    yum install -y https://download.postgresql.org/pub/repos/yum/${PG_MAJOR}/redhat/rhel-7-x86_64/pgdg-centos${PG_MJR}-${PG_MAJOR}-3.noarch.rpm && \
+    yum install -y https://download.postgresql.org/pub/repos/yum/${PG_VERSION}/redhat/rhel-7-x86_64/pgdg-centos${PG_VERSION}-${PG_VERSION}-2.noarch.rpm && \
     yum-install && \
     yum-clean && \
     chmod --recursive --changes +x /etc/my_init.d/*.sh /etc/service /usr/local/bin

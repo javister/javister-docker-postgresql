@@ -15,8 +15,12 @@ if [ ! -d  "${PGDATA}" ]; then
     chown -R system:system "${PGDATA}"
 
     # initialise empty database structure and change temporary ownership config files
-    if [ ! -d "${PGDATA}/${PG_MAJOR}" ]; then
-        setuser system initdb --locale=ru_RU.UTF-8
+    if [ ! -d "${PGDATA}/${PG_VERSION}" ]; then
+        if [ "${LANG}" ]; then
+            setuser system initdb --locale=${LANG}
+        else 
+            setuser system initdb
+        fi
     fi
     if [ "${POSTGRES_PASSWORD}" ]; then
         pass="PASSWORD '${POSTGRES_PASSWORD}'"
