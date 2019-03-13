@@ -55,6 +55,7 @@ EOWARN
     pid="$!"
     
     wait4tcp 127.0.0.1 5432
+    sleep 5
 
     setuser system createdb ${PG_DB_NAME}
     setuser system psql --dbname=${PG_DB_NAME} --command "ALTER USER system WITH SUPERUSER ${pass};"
