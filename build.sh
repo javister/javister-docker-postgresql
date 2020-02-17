@@ -53,13 +53,11 @@ EOF
     docker build \
         ${doPull} \
         ${useCache} \
-        --tag ${IMAGE_TAG}:latest \
         --tag ${IMAGE_TAG}:${VERSION} \
         ${PROXY_ARGS} \
         $@ \
         .
 
-    [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:latest || true
     [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:${VERSION} || true
 
     if [ "${downstream}" == "yes" ]; then

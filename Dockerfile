@@ -1,7 +1,7 @@
 FROM javister-docker-docker.bintray.io/javister/javister-docker-base:1.1
 MAINTAINER Viktor Verbitsky <vektory79@gmail.com>
 
-ARG PG_VERSION="11"
+ARG PG_VERSION="12"
 
 LABEL postgresql=${PG_VERSION}
 
@@ -20,7 +20,7 @@ ENV HOME="/root" \
 COPY files /
 
 RUN . /usr/local/bin/yum-proxy && \
-    yum install -y https://download.postgresql.org/pub/repos/yum/${PG_VERSION}/redhat/rhel-7-x86_64/pgdg-centos${PG_VERSION}-${PG_VERSION}-2.noarch.rpm && \
+    yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm && \
     yum-install && \
     yum-clean && \
     chmod --recursive --changes +x /etc/my_init.d/*.sh /etc/service /usr/local/bin
