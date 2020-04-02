@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.javister.docker</groupId>
+    <artifactId>postgresql-root</artifactId>
+    <version>${revision}${sha1}${changelist}</version>
+    <packaging>pom</packaging>
+    <name>${project.groupId}:${project.artifactId}</name>
+
+    <parent>
+        <artifactId>base-root</artifactId>
+        <groupId>com.github.javister.docker</groupId>
+        <version>2.1</version>
+    </parent>
+    
+    <scm>
+        <connection>scm:git:https://github.com/javister/javister-docker-postgresql.git</connection>
+    </scm>
+
+    <ciManagement>
+        <system>GitHub</system>
+        <url>https://github.com/javister/javister-docker-postgresql/actions</url>
+    </ciManagement>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/javister/javister-docker-postgresql/issues</url>
+    </issueManagement>
+
+    <properties>
+        <!-- Project Version -->
+        <revision>1.0</revision>
+        <changelist>-SNAPSHOT</changelist>
+        <sha1/>
+        <!-- Settings -->
+        <docker.image.artifactId>javister-docker-postgresql</docker.image.artifactId>
+        <!-- Dependency versions -->
+        <javister-docker-base.revision>2.2</javister-docker-base.revision>
+        <javister-docker-base.version>${javister-docker-base.revision}-SNAPSHOT</javister-docker-base.version>
+        <postgresql.version>42.0.0</postgresql.version>
+    </properties>
+
+    <modules>
+        <module>postgresql-12</module>
+        <module>testing</module>
+        <module>tests</module>
+    </modules>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-javister-dockertesting</id>
+            <name>javister-dockertesting</name>
+            <url>https://api.bintray.com/maven/javister/dockertesting/javister-docker-postgresql/;publish=1</url>
+        </repository>
+    </distributionManagement>
+</project>

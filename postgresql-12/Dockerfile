@@ -1,4 +1,5 @@
-FROM javister-docker-docker.bintray.io/javister/javister-docker-base:1.1
+ARG JAVISTER_BASE_VERSION
+FROM javister-docker-docker.bintray.io/javister/javister-docker-base:${JAVISTER_BASE_VERSION}
 MAINTAINER Viktor Verbitsky <vektory79@gmail.com>
 
 ARG PG_VERSION="12"
@@ -17,7 +18,7 @@ ENV HOME="/root" \
     PATH="/usr/pgsql-${PG_VERSION}/bin:${PATH}" \
     RPMLIST="postgresql${PG_VERSION} postgresql${PG_VERSION}-server postgresql${PG_VERSION}-contrib"
 
-COPY files /
+COPY src/main/docker /
 
 RUN . /usr/local/bin/yum-proxy && \
     yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm && \
