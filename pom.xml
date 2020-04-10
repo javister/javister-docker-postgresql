@@ -57,4 +57,13 @@
             <url>https://api.bintray.com/maven/javister/dockertesting/javister-docker-postgresql/;publish=1</url>
         </repository>
     </distributionManagement>
+
+
+    <repositories>
+        <repository>
+            <id>bintray-javister-dockertesting</id>
+            <name>bintray</name>
+            <url>https://dl.bintray.com/javister/dockertesting</url>
+        </repository>
+    </repositories>
 </project>
