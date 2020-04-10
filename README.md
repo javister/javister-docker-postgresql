@@ -1,7 +1,7 @@
 # Docker образ PostgreSQL на основе образа [javister-docker-base](https://github.com/javister/javister-docker-base)
 
-[ ![Download](https://api.bintray.com/packages/javister/docker/javister%3Ajavister-docker-postgresql/images/download.svg) ](https://bintray.com/javister/docker/javister%3Ajavister-docker-postgresql/_latestVersion)
-[![Build Status](https://travis-ci.org/javister/javister-docker-postgresql.svg?branch=master)](https://travis-ci.org/javister/javister-docker-postgresql)
+[ ![Download](https://api.bintray.com/packages/javister/dockertesting/javister-docker-postgresql/images/download.svg) ](https://bintray.com/javister/dockertesting/javister-docker-postgresql/_latestVersion)
+![Build master branch](https://github.com/javister/javister-docker-postgresql/workflows/Build%20master%20branch/badge.svg)
 
 Переменные окружения для настройки:
 
