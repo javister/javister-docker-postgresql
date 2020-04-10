@@ -14,7 +14,6 @@ import org.testcontainers.containers.Network;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.containers.output.Slf4jLogConsumer;
 import org.testcontainers.containers.wait.strategy.DockerHealthcheckWaitStrategy;
-import org.testcontainers.containers.wait.strategy.LogMessageWaitStrategy;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,7 +24,6 @@ import java.time.Duration;
 import java.util.Objects;
 
 import static java.time.temporal.ChronoUnit.MINUTES;
-import static java.time.temporal.ChronoUnit.SECONDS;
 
 /**
  * Обёртка над контейнером
