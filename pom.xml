@@ -30,7 +30,7 @@
     <properties>
         <!-- Project Version -->
         <revision>1.0</revision>
-        <changelist></changelist>
+        <changelist>-SNAPSHOT</changelist>
         <sha1/>
         <!-- Settings -->
         <docker.image.artifactId>javister-docker-postgresql</docker.image.artifactId>
