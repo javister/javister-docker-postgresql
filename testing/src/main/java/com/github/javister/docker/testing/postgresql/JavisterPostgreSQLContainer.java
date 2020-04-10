@@ -13,8 +13,8 @@ import org.testcontainers.containers.BindMode;
 import org.testcontainers.containers.Network;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.containers.output.Slf4jLogConsumer;
+import org.testcontainers.containers.wait.strategy.DockerHealthcheckWaitStrategy;
 import org.testcontainers.containers.wait.strategy.LogMessageWaitStrategy;
-import org.testcontainers.jdbc.ContainerDatabaseDriver;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,6 +24,7 @@ import java.sql.Statement;
 import java.time.Duration;
 import java.util.Objects;
 
+import static java.time.temporal.ChronoUnit.MINUTES;
 import static java.time.temporal.ChronoUnit.SECONDS;
 
 /**
@@ -340,7 +341,6 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
                 processor.accept(resultSet);
             }
         }
-//        ContainerDatabaseDriver.killContainers();
     }
 
     public static HikariDataSource getDataSource(String jdbcUrl) {
@@ -377,10 +377,8 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
                 .withExposedPorts(5432)
                 .withStartupTimeout(Duration.ofMinutes(3))
                 .withCommand("/usr/local/bin/my_init");
-        this.waitStrategy = new LogMessageWaitStrategy()
-                .withRegEx(".*database system is ready to accept connections.*\\s")
-                .withTimes(1)
-                .withStartupTimeout(Duration.of(120, SECONDS));
+        this.waitStrategy = new DockerHealthcheckWaitStrategy()
+                .withStartupTimeout(Duration.of(10, MINUTES));
     }
 
     public enum Variant {
