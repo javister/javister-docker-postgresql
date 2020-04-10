@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+BACKUP_NAME=$1
+
+[ -z "$BACKUP_NAME" ] && BACKUP_NAME="backup-$(date +"%Y-%m-%d-%H-%M-%S").dump"
+
+echo "Backup to $BACKUP_NAME"
+
+setuser system pg_dump -Fc $PG_DB_NAME > "$PGCONF/backup/$BACKUP_NAME"

@@ -45,18 +45,7 @@ EOF
     done
     shift $((OPTIND-1))
 
-    PROXY_ARGS="--build-arg http_proxy=${http_proxy} \
-                --build-arg no_proxy=${no_proxy}"
-
-    [ "${doPull}" ] && docker pull ${IMAGE_TAG}:${VERSION} || true
-
-    docker build \
-        ${doPull} \
-        ${useCache} \
-        --tag ${IMAGE_TAG}:${VERSION} \
-        ${PROXY_ARGS} \
-        $@ \
-        .
+    mvn -B ${release}
 
     [ "${release}" == "release" ] && docker push ${IMAGE_TAG}:${VERSION} || true
 

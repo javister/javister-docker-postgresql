@@ -36,11 +36,15 @@
         <docker.image.artifactId>javister-docker-postgresql</docker.image.artifactId>
         <!-- Dependency versions -->
         <javister-docker-base.revision>2.2</javister-docker-base.revision>
-        <javister-docker-base.version>${javister-docker-base.revision}-SNAPSHOT</javister-docker-base.version>
+        <javister-docker-base.version>${javister-docker-base.revision}</javister-docker-base.version>
         <postgresql.version>42.0.0</postgresql.version>
+        <HikariCP-java6.version>2.3.8</HikariCP-java6.version>
     </properties>
 
     <modules>
+        <module>postgresql-9.5</module>
+        <module>postgresql-9.6</module>
+        <module>postgresql-11</module>
         <module>postgresql-12</module>
         <module>testing</module>
         <module>tests</module>

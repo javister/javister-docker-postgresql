@@ -16,6 +16,24 @@
     <dependencies>
         <dependency>
             <groupId>${docker.image.groupId}</groupId>
+            <artifactId>${docker.image.artifactId}-9_5</artifactId>
+            <version>${project.version}</version>
+            <classifier>docker-info</classifier>
+        </dependency>
+        <dependency>
+            <groupId>${docker.image.groupId}</groupId>
+            <artifactId>${docker.image.artifactId}-9_6</artifactId>
+            <version>${project.version}</version>
+            <classifier>docker-info</classifier>
+        </dependency>
+        <dependency>
+            <groupId>${docker.image.groupId}</groupId>
+            <artifactId>${docker.image.artifactId}-11</artifactId>
+            <version>${project.version}</version>
+            <classifier>docker-info</classifier>
+        </dependency>
+        <dependency>
+            <groupId>${docker.image.groupId}</groupId>
             <artifactId>${docker.image.artifactId}-12</artifactId>
             <version>${project.version}</version>
             <classifier>docker-info</classifier>
@@ -39,6 +57,17 @@
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>postgresql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP-java6</artifactId>
+            <version>${HikariCP-java6.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>javister-docker-postgresql-12</artifactId>
+    <artifactId>javister-docker-postgresql-11</artifactId>
     <name>${project.groupId}:${project.artifactId}</name>
 
     <parent>
@@ -14,11 +14,11 @@
     </parent>
 
     <properties>
-        <pg.version>12</pg.version>
+        <pg.version>11</pg.version>
     </properties>
     
     <build>
-        <finalName>javister-docker-postgresql-12</finalName>
+        <finalName>javister-docker-postgresql-11</finalName>
         <plugins>
             <!-- https://github.com/spotify/dockerfile-maven -->
             <plugin>
