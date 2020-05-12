@@ -14,7 +14,7 @@ if [[ ! -f "${PGCONF}/backup/${BACKUP_NAME}" ]]; then
     exit -1
 fi
 
-setuser system dropdb ${PG_DB_NAME}
-setuser system createdb ${PG_DB_NAME}
+setuser ${PUSER} dropdb ${PG_DB_NAME}
+setuser ${PUSER} createdb ${PG_DB_NAME}
 
-setuser system pg_restore -Fc -d ${PG_DB_NAME} "${PGCONF}/backup/${BACKUP_NAME}"
+setuser ${PUSER} pg_restore -Fc -d ${PG_DB_NAME} "${PGCONF}/backup/${BACKUP_NAME}"

@@ -4,6 +4,9 @@ import org.testcontainers.containers.JdbcDatabaseContainer;
 import org.testcontainers.containers.JdbcDatabaseContainerProvider;
 import org.testcontainers.jdbc.ConnectionUrl;
 
+/**
+ * Провайдер контейнеров PostgreSQL по JDBC URL.
+ */
 public class JavisterPostgreSQLContainerProvider extends JdbcDatabaseContainerProvider {
 
     public static final String USER_PARAM = "user";

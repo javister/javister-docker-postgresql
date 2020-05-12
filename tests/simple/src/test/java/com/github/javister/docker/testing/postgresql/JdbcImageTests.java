@@ -2,7 +2,6 @@ package com.github.javister.docker.testing.postgresql;
 
 import com.github.javister.docker.testing.base.JavisterBaseContainer;
 import org.junit.AfterClass;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.testcontainers.jdbc.ContainerDatabaseDriver;
@@ -13,9 +12,8 @@ import java.sql.SQLException;
 import static com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.JAVISTER_DRIVER_NAME;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Disabled("Disabled until this issue: https://github.com/testcontainers/testcontainers-java/issues/2544")
 public class JdbcImageTests {
-    private static final String JDBC_URL_TEMPLATE = "jdbc:tc:%s:%s:///system?password=somepwd&fsync=off&volumePath=%s&initScript=%s";
+    private static final String JDBC_URL_TEMPLATE = "jdbc:tc:%s:%s:///system?user=someuser&password=somepwd&fsync=off&volumePath=%s&initScript=%s";
 
     @AfterClass
     public static void testCleanup() {

@@ -1,2 +1,2 @@
 #!/bin/bash
-exec setuser system ${PGENGINE}/postgres -D $PGDATA -c config_file=$PGCONF/postgresql.conf
+exec setuser ${PUSER} ${PGENGINE}/postgres -D $PGDATA -c config_file=$PGCONF/postgresql.conf
