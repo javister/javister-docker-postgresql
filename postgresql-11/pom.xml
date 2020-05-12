@@ -154,9 +154,10 @@
                         <version>${dockerfile-maven-plugin.version}</version>
                         <executions>
                             <execution>
-                                <id>force-push</id>
+                                <id>default</id>
                                 <phase>package</phase>
                                 <goals>
+                                    <goal>build</goal>
                                     <goal>push</goal>
                                 </goals>
                             </execution>
