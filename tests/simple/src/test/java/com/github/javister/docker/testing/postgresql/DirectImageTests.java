@@ -1,5 +1,6 @@
 package com.github.javister.docker.testing.postgresql;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.sql.SQLException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.matchesPattern;
@@ -40,8 +42,39 @@ class DirectImageTests {
     @Order(1)
     @ParameterizedTest(name = "PostgreSQL variant: {0}")
     @EnumSource(JavisterPostgreSQLContainer.Variant.class)
-    void initDbTest(JavisterPostgreSQLContainer.Variant variant) throws SQLException {
+    void nonResultingQueriesTest(JavisterPostgreSQLContainer.Variant variant) throws SQLException {
         try (JavisterPostgreSQLContainer<?> postgres = getPostgre(variant).withInitScript("SimpleDB.sql")) {
+            postgres.start();
+
+            AtomicInteger counter = new AtomicInteger(0);
+            postgres.performQuery(
+                    "INSERT INTO bar (foo) VALUES ('test1')",
+                    resultSet -> counter.getAndIncrement()
+            );
+            assertEquals(0, counter.get(), "Не должно было быть никаких результатов");
+            postgres.performQuery("INSERT INTO bar (foo) VALUES ('test2')");
+            postgres.performQuery(
+                    "SELECT foo FROM bar WHERE foo = 'Non existed'",
+                    resultSet -> counter.getAndIncrement()
+            );
+            assertEquals(0, counter.get(), "Не должно было быть никаких результатов");
+            postgres.performQuery(
+                    "SELECT foo FROM bar WHERE foo = 'test1'",
+                    resultSet -> assertEquals("test1", resultSet.getString(1), "Должно присутствовать значение 'test1'")
+            );
+            postgres.performQuery(
+                    "SELECT foo FROM bar WHERE foo = 'test2'",
+                    resultSet -> assertEquals("test2", resultSet.getString(1), "Должно присутствовать значение 'test2'")
+            );
+        }
+    }
+
+    @Order(2)
+    @ParameterizedTest(name = "PostgreSQL variant: {0}")
+    @EnumSource(JavisterPostgreSQLContainer.Variant.class)
+    void initDbTest(JavisterPostgreSQLContainer.Variant variant) throws SQLException, IOException {
+        try (JavisterPostgreSQLContainer<?> postgres = getPostgre(variant).withInitScript("SimpleDB.sql")) {
+            postgres.deleteTestDir();
             postgres.start();
 
             postgres.performQuery(
@@ -51,7 +84,7 @@ class DirectImageTests {
         }
     }
 
-    @Order(2)
+    @Order(3)
     @ParameterizedTest(name = "PostgreSQL variant: {0}")
     @EnumSource(JavisterPostgreSQLContainer.Variant.class)
     void backupTest(JavisterPostgreSQLContainer.Variant variant) throws SQLException, IOException, InterruptedException {
@@ -81,7 +114,7 @@ class DirectImageTests {
         }
     }
 
-    @Order(3)
+    @Order(4)
     @ParameterizedTest(name = "PostgreSQL variant: {0}")
     @EnumSource(JavisterPostgreSQLContainer.Variant.class)
     void restoreTest(JavisterPostgreSQLContainer.Variant variant) throws SQLException, IOException, InterruptedException {
@@ -97,6 +130,23 @@ class DirectImageTests {
                     StandardCopyOption.REPLACE_EXISTING);
 
             postgres.restore("test.backup");
+
+            postgres.performQuery(
+                    "SELECT foo FROM bar",
+                    resultSet -> assertEquals("hello world", resultSet.getString(1), "Value from init script should equal real value")
+            );
+        }
+    }
+
+    @Order(4)
+    @ParameterizedTest(name = "PostgreSQL variant: {0}")
+    @EnumSource(JavisterPostgreSQLContainer.Variant.class)
+    void withRestoreTest(JavisterPostgreSQLContainer.Variant variant) throws SQLException, IOException {
+        try (JavisterPostgreSQLContainer<?> postgres = getPostgre(variant)) {
+            Assertions.assertNotNull(postgres.getTestPath(), "В тесте путь к рабочему каталогу должен быть установлен.");
+            postgres.withExternalBackup(postgres.getTestPath().toPath().resolve("test-" + variant.getValue() + ".backup").toString());
+            postgres.deleteTestDir();
+            postgres.start();
 
             postgres.performQuery(
                     "SELECT foo FROM bar",

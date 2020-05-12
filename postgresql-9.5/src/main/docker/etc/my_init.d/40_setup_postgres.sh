@@ -6,23 +6,23 @@ set_listen_addresses() {
 	sed -ri "s/^#?(listen_addresses\s*=\s*)\S+/\1'$sedEscapedValue'/" "${PGDATA}/postgresql.conf"
 }
 
-chown -R system:system "/config"
+chown -R ${PUSER}:${PUSER} "/config" || true
 
 # create folder structure and change ownership
-if [ ! -d  "${PGDATA}" ]; then
+if [[ ! -d  "${PGDATA}" ]]; then
 
     mkdir -p "${PGDATA}"
-    chown -R system:system "${PGDATA}"
+    chown -R ${PUSER}:${PUSER} "${PGDATA}"
 
     # initialise empty database structure and change temporary ownership config files
-    if [ ! -d "${PGDATA}/${PG_VERSION}" ]; then
+    if [[ ! -d "${PGDATA}/${PG_VERSION}" ]]; then
         if [ "${LANG}" ]; then
-            setuser system initdb --locale=${LANG}
+            setuser ${PUSER} initdb --locale=${LANG}
         else 
-            setuser system initdb
+            setuser ${PUSER} initdb
         fi
     fi
-    if [ "${POSTGRES_PASSWORD}" ]; then
+    if [[ "${POSTGRES_PASSWORD}" ]]; then
         pass="PASSWORD '${POSTGRES_PASSWORD}'"
         authMethod=md5
     else
@@ -51,16 +51,16 @@ EOWARN
 
     sync
 
-    setuser system postgres &
+    setuser ${PUSER} postgres &
     pid="$!"
     
     wait4tcp 127.0.0.1 5432
     sleep 5
 
-    setuser system createdb ${PG_DB_NAME}
-    setuser system psql --dbname=${PG_DB_NAME} --command "ALTER USER system WITH SUPERUSER ${pass};"
-    
-    setuser system pg_ctl stop -w
+    setuser ${PUSER} createdb ${PG_DB_NAME}
+    setuser ${PUSER} psql --dbname=${PG_DB_NAME} --command "CREATE ROLE ${POSTGRES_USER} WITH LOGIN ${pass} SUPERUSER;"
+
+    setuser ${PUSER} pg_ctl stop -w
 
     set_listen_addresses '*'
 
@@ -71,15 +71,15 @@ EOWARN
     sync
 fi
 
-if [ ! -f "${PGCONF}/postgresql.conf" ]; then
+if [[ ! -f "${PGCONF}/postgresql.conf" ]]; then
     cp "${PGDATA}"/postgresql.conf "${PGCONF}"/postgresql.conf
-    chown system:system "${PGCONF}"/postgresql.conf
+    chown ${PUSER}:${PUSER} "${PGCONF}"/postgresql.conf
     chmod 666 "${PGCONF}"/postgresql.conf
 fi
 
-if [ ! -f "${PGCONF}/backup" ]; then
+if [[ ! -f "${PGCONF}/backup" ]]; then
     mkdir -p "${PGCONF}/backup"
-    chown system:system "${PGCONF}/backup"
+    chown ${PUSER}:${PUSER} "${PGCONF}/backup"
 fi
 
-chown -R system:system "${PGCONF}"
+chown -R ${PUSER}:${PUSER} "${PGCONF}" || true
