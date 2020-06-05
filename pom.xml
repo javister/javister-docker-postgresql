@@ -36,7 +36,7 @@
         <!-- Dependency versions -->
         <javister-docker-base.revision>2.3</javister-docker-base.revision>
         <javister-docker-base.version>${javister-docker-base.revision}</javister-docker-base.version>
-        <postgresql.version>42.2.12</postgresql.version>
+        <postgresql.version>42.2.13</postgresql.version>
         <HikariCP-java6.version>2.3.13</HikariCP-java6.version>
     </properties>
 
