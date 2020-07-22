@@ -31,20 +31,6 @@ jobs:
               echo "::set-env name=doRebuild::true"
           fi
 
-      - name: Pull old Docker image v9.5
-        run: |
-          if docker pull ${imageName}:9.5-${imageTag}; then
-              echo "::set-env name=oldImagePresent::true"
-          else
-              echo "::set-env name=doRebuild::true"
-          fi
-      - name: Check updates in image v9.5
-        if: env.oldImagePresent == 'true'
-        run: |
-          if [[ "$(docker run --rm ${imageName}:9.5-${imageTag} yum check-update -q | wc --lines)" -gt "3" ]]; then
-              echo "::set-env name=doRebuild::true"
-          fi
-
       - name: Pull old Docker image v9.6
         run: |
           if docker pull ${imageName}:9.6-${imageTag}; then
