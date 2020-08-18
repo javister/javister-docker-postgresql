@@ -43,6 +43,12 @@
             <groupId>com.github.javister.docker</groupId>
             <artifactId>javister-docker-base-testing</artifactId>
             <version>${javister-docker-base.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.checkerframework</groupId>
+                    <artifactId>checker-qual</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
