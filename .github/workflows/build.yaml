@@ -1,4 +1,5 @@
 name: Build master branch
+on:
   push:
     branches-ignore:
       - 'gh-pages'
@@ -16,11 +17,6 @@ jobs:
           server-id: bintray-javister
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
-
-      - name: Set up Python 3.7 For Reporting
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.7
 
       - name: Cache Maven packages
         uses: actions/cache@v1
