@@ -158,7 +158,6 @@ class DirectImageTests {
     private JavisterPostgreSQLContainer<?> getPostgre(JavisterPostgreSQLContainer.Variant variant) {
         return new JavisterPostgreSQLContainer<>(variant, DirectImageTests.class)
                 .withFSync(false)
-                .withImagePullPolicy(__ -> false)
-                .withLogConsumer(new Slf4jLogConsumer(LOGGER).withPrefix("POSTGRE").withRemoveAnsiCodes(false));
+                .withImagePullPolicy(__ -> false);
     }
 }
