@@ -67,7 +67,7 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     /**
      * Префикс логирования сообщений Docker контейнера.
      */
-    protected String logPrefix = "DOCKER";
+    protected String logPrefix = "POSTGRESQL";
     private boolean suppressSlfLogger = false;
     private final Slf4jLogConsumer logConsumer = new Slf4jLogConsumer(LOGGER).withPrefix(logPrefix).withRemoveAnsiCodes(false);
     private final Variant variant;
@@ -171,6 +171,7 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
             String name = new File(backupPath).getName();
             this.withFileSystemBind(backupPath, "/config/postgres/backup/" + name, BindMode.READ_WRITE);
         }
+        this.withLogConsumer(this.getLogConsumer());
     }
 
     @Override

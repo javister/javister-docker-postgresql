@@ -1,5 +1,8 @@
 name: Build master branch
-on: [push]
+  push:
+    branches-ignore:
+      - 'gh-pages'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,33 +16,50 @@ jobs:
           server-id: bintray-javister
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
+
       - name: Set up Python 3.7 For Reporting
         uses: actions/setup-python@v1
         with:
           python-version: 3.7
+
       - name: Cache Maven packages
         uses: actions/cache@v1
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+
       - name: Build and Check
         run: mvn --no-transfer-progress -Dstyle.color=always --fail-at-end verify
         env:
           MAVEN_USERNAME: ${{ secrets.BINTRAY_USER }}
           MAVEN_PASSWORD: ${{ secrets.BINTRAY_PASSWORD }}
           MAVEN_OPTS: -Djansi.force=true
-      - name: Upload Test Results
+
+
+      # Thanks to @simple1elf (Telegram) for the working template
+      # https://github.com/simple-elf/github-allure-history
+      - name: Get Allure history
+        uses: actions/checkout@v2
         if: always()
-        shell: bash
-        run: curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py | python - -t ${{ secrets.REPORTCI_TOKEN }}
-      - name: Login to Bintray Javister
-        if: github.ref == 'refs/heads/master' || contains(github.ref, 'release-')
-        run: docker login -u ${{ secrets.BINTRAY_USER }} -p ${{ secrets.BINTRAY_PASSWORD }} javister-docker-docker.bintray.io
-      - name: Push Docker image
-        if: github.ref == 'refs/heads/master' || contains(github.ref, 'release-')
-        run: mvn --no-transfer-progress -Dstyle.color=always -DforcePush -DskipTests verify
-        env:
-          MAVEN_USERNAME: ${{ secrets.BINTRAY_USER }}
-          MAVEN_PASSWORD: ${{ secrets.BINTRAY_PASSWORD }}
-          MAVEN_OPTS: -Djansi.force=true
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Allure Report action
+        uses: simple-elf/allure-report-action@master
+        #uses: ./allure-report-action
+        if: always()
+        #id: allure-report
+        with:
+          allure_results: 'target/allure-results'
+          allure_history: allure-history
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3.6.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-history
+          publish_branch: gh-pages

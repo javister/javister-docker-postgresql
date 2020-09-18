@@ -16,6 +16,8 @@
     <properties>
         <pg.version>9.5</pg.version>
         <pg.pkg.version>95</pg.pkg.version>
+        <image.tag>${pg.version}-${project.version}</image.tag>
+        <cache.from>${docker.image}:${image.tag}</cache.from>
     </properties>
     
     <build>
@@ -54,10 +56,10 @@
                         <configuration>
                             <repository>${docker.image}</repository>
                             <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-                            <tag>${pg.version}-${revision}</tag>
-                            <cacheFrom>${docker.image}:${pg.version}-${revision}</cacheFrom>
+                            <tag>${image.tag}</tag>
+                            <cacheFrom>${cache.from}</cacheFrom>
                             <buildArgs>
-                                <JAVISTER_BASE_VERSION>${javister-docker-base.revision}</JAVISTER_BASE_VERSION>
+                                <JAVISTER_BASE_VERSION>${javister-docker-base.version}</JAVISTER_BASE_VERSION>
                                 <PG_VERSION>${pg.version}</PG_VERSION>
                                 <PG_PKG_VERSION>${pg.pkg.version}</PG_PKG_VERSION>
                                 <https_proxy>${env.http_proxy}</https_proxy>
@@ -126,10 +128,10 @@
                         <configuration>
                             <repository>${docker.image}</repository>
                             <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-                            <tag>${pg.version}-${revision}</tag>
-                            <cacheFrom>${docker.image}:${pg.version}-${revision}</cacheFrom>
+                            <tag>${image.tag}</tag>
+                            <cacheFrom>${cache.from}</cacheFrom>
                             <buildArgs>
-                                <JAVISTER_BASE_VERSION>${javister-docker-base.revision}</JAVISTER_BASE_VERSION>
+                                <JAVISTER_BASE_VERSION>${javister-docker-base.version}</JAVISTER_BASE_VERSION>
                                 <PG_VERSION>${pg.version}</PG_VERSION>
                                 <PG_PKG_VERSION>${pg.pkg.version}</PG_PKG_VERSION>
                                 <https_proxy>${env.http_proxy}</https_proxy>
@@ -168,10 +170,10 @@
                         <configuration>
                             <repository>${docker.image}</repository>
                             <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-                            <tag>${pg.version}-${revision}</tag>
-                            <cacheFrom>${docker.image}:${pg.version}-${revision}</cacheFrom>
+                            <tag>${image.tag}</tag>
+                            <cacheFrom>${cache.from}</cacheFrom>
                             <buildArgs>
-                                <JAVISTER_BASE_VERSION>${javister-docker-base.revision}</JAVISTER_BASE_VERSION>
+                                <JAVISTER_BASE_VERSION>${javister-docker-base.version}</JAVISTER_BASE_VERSION>
                                 <PG_VERSION>${pg.version}</PG_VERSION>
                                 <PG_PKG_VERSION>${pg.pkg.version}</PG_PKG_VERSION>
                                 <https_proxy>${env.http_proxy}</https_proxy>
