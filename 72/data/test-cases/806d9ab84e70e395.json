@@ -1,0 +1,74 @@
+{
+  "uid" : "806d9ab84e70e395",
+  "name" : "PostgreSQL variant: V9_6",
+  "fullName" : "com.github.javister.docker.testing.postgresql.DirectImageTests.nonResultingQueriesTest",
+  "historyId" : "d48fe5fa97c56044c4fac858bceb5620",
+  "time" : {
+    "start" : 1600442378018,
+    "stop" : 1600442383821,
+    "duration" : 5803
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "85d0989432ddd52c",
+      "name" : "Stdout",
+      "source" : "85d0989432ddd52c.txt",
+      "type" : "text/plain",
+      "size" : 1576
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az168"
+  }, {
+    "name" : "thread",
+    "value" : "6404@fv-az168.ForkJoinPool-1-worker-1(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "testClass",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "nonResultingQueriesTest"
+  }, {
+    "name" : "suite",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "806d9ab84e70e395.json",
+  "parameterValues" : [ ]
+}
