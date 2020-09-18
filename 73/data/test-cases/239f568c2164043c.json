@@ -1,0 +1,94 @@
+{
+  "uid" : "239f568c2164043c",
+  "name" : "PostgreSQL variant: V9_6",
+  "fullName" : "com.github.javister.docker.testing.postgresql.DirectImageTests.nonResultingQueriesTest",
+  "historyId" : "d48fe5fa97c56044c4fac858bceb5620",
+  "time" : {
+    "start" : 1600444677145,
+    "stop" : 1600444682911,
+    "duration" : 5766
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "f3551a1e56d6fcab",
+      "name" : "Stdout",
+      "source" : "f3551a1e56d6fcab.txt",
+      "type" : "text/plain",
+      "size" : 1576
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az176"
+  }, {
+    "name" : "thread",
+    "value" : "5951@fv-az176.ForkJoinPool-1-worker-1(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "testClass",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "nonResultingQueriesTest"
+  }, {
+    "name" : "suite",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "806d9ab84e70e395",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/72//#testresult/806d9ab84e70e395",
+        "status" : "passed",
+        "time" : {
+          "start" : 1600442378018,
+          "stop" : 1600442383821,
+          "duration" : 5803
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "239f568c2164043c.json",
+  "parameterValues" : [ ]
+}
