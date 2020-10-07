@@ -1,0 +1,6 @@
+06:37:05.038 [34mINFO [0;39m - HikariCP pool HikariPool-47 is starting. 
+06:37:05.048 [34mINFO [0;39m - Creating container for image: javister-docker-docker.bintray.io/javister/javister-docker-postgresql:12-1.5-SNAPSHOT 
+06:37:05.069 [34mINFO [0;39m - Starting container with ID: 91ea7a7342c041c7aadea5a8b0f653d621aca6bbf7558c0fe80a00abe520ea5c 
+06:37:05.414 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:12-1.5-SNAPSHOT is starting: 91ea7a7342c041c7aadea5a8b0f653d621aca6bbf7558c0fe80a00abe520ea5c 
+06:37:15.736 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:12-1.5-SNAPSHOT started in PT10.688S 
+06:37:15.747 [34mINFO [0;39m - HikariCP pool HikariPool-47 is shutting down. 
