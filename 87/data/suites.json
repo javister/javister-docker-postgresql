@@ -1,0 +1,481 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "com.github.javister.docker.testing.postgresql.DirectImageTests",
+    "children" : [ {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "61725cc4626076da",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748731970,
+        "stop" : 1602748753416,
+        "duration" : 21446
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "3ccd4e4a46ced33f",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748753688,
+        "stop" : 1602748770068,
+        "duration" : 16380
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "9252960b3efc2737",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748770120,
+        "stop" : 1602748781006,
+        "duration" : 10886
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "10b008bc2602a69",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748781046,
+        "stop" : 1602748791949,
+        "duration" : 10903
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "5a851f125b8805fd",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748792012,
+        "stop" : 1602748797924,
+        "duration" : 5912
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "3591341225243b11",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748797931,
+        "stop" : 1602748803780,
+        "duration" : 5849
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "21b324d5a1dd592c",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748803816,
+        "stop" : 1602748809591,
+        "duration" : 5775
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "4f0a58c0187b6fbd",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748809614,
+        "stop" : 1602748815430,
+        "duration" : 5816
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "b000c301d5a6e40f",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748815447,
+        "stop" : 1602748831577,
+        "duration" : 16130
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "2b63b10486daad10",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748831617,
+        "stop" : 1602748847747,
+        "duration" : 16130
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "7f571fefb1128440",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748847788,
+        "stop" : 1602748858737,
+        "duration" : 10949
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "f47188e127a48d7b",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748858770,
+        "stop" : 1602748869724,
+        "duration" : 10954
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "7cc88c693afb387a",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748869739,
+        "stop" : 1602748875927,
+        "duration" : 6188
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "500a6c19a457ad09",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748875936,
+        "stop" : 1602748882093,
+        "duration" : 6157
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "5b2c6651349c80c7",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748882135,
+        "stop" : 1602748888386,
+        "duration" : 6251
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "82cec1f54e2a52e6",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748888398,
+        "stop" : 1602748894588,
+        "duration" : 6190
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "2c9159887711444c",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748894635,
+        "stop" : 1602748911306,
+        "duration" : 16671
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "d2bbd46b83ad9c34",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748911334,
+        "stop" : 1602748928046,
+        "duration" : 16712
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "68b582c641daa546",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748928083,
+        "stop" : 1602748939540,
+        "duration" : 11457
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "53fb863d17ca97eb",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748939567,
+        "stop" : 1602748950848,
+        "duration" : 11281
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "65a1d087168c198c",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748950901,
+        "stop" : 1602748967548,
+        "duration" : 16647
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "9ae9957ea021717d",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748967585,
+        "stop" : 1602748984355,
+        "duration" : 16770
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "731cce72f1eb751e",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748984401,
+        "stop" : 1602748995998,
+        "duration" : 11597
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "7a72ce29ae1c85ba",
+      "parentUid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602748996054,
+        "stop" : 1602749007349,
+        "duration" : 11295
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5f20b33ed9f796ff5cd5d9774510e3f3"
+  }, {
+    "name" : "com.github.javister.docker.testing.postgresql.JdbcImageTests",
+    "children" : [ {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "f1eb40b824418d40",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749007423,
+        "stop" : 1602749023330,
+        "duration" : 15907
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "9fa7e7ef3542d9f3",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749023336,
+        "stop" : 1602749039289,
+        "duration" : 15953
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "bba6e87a26cedfb",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749039299,
+        "stop" : 1602749055115,
+        "duration" : 15816
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "58c40e01536c110b",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749055130,
+        "stop" : 1602749071006,
+        "duration" : 15876
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "61b69b09f37ac8b2",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749071027,
+        "stop" : 1602749086905,
+        "duration" : 15878
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "f71cb1a5cfbd6d93",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749086915,
+        "stop" : 1602749102792,
+        "duration" : 15877
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "a3c5de86b8bea85c",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749102826,
+        "stop" : 1602749113545,
+        "duration" : 10719
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "5097655007c96dcc",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749113593,
+        "stop" : 1602749124302,
+        "duration" : 10709
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_5",
+      "uid" : "39f44d9d9f893bde",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749124310,
+        "stop" : 1602749140184,
+        "duration" : 15874
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V9_6",
+      "uid" : "c90c829c3d628696",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749140197,
+        "stop" : 1602749156044,
+        "duration" : 15847
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V11",
+      "uid" : "9c5f0a8eed0eaf0b",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749156052,
+        "stop" : 1602749166762,
+        "duration" : 10710
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "PostgreSQL variant: V12",
+      "uid" : "310bb63f554f9210",
+      "parentUid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602749166796,
+        "stop" : 1602749177536,
+        "duration" : 10740
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7ecfb2a6c901b0fe322bcbd373fb060a"
+  } ],
+  "name" : "suites"
+}
