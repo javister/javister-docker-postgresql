@@ -65,7 +65,7 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
 
     private Class<?> testClass;
     /**
-     * Префикс логирования сообщений Docker контейнера.
+     * Префикс логгирования сообщений Docker контейнера.
      */
     protected String logPrefix = "POSTGRESQL";
     private boolean suppressSlfLogger = false;
@@ -130,7 +130,7 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
      *
      * <p>Объект класса необходим для нахождения рабочего каталога тестов.
      *
-     * <p>squid:S1699 - В общем случае так делать не хорошо, но в данном конкретном месте побочные эффекты учнеты.
+     * <p>squid:S1699 - В общем случае так делать не хорошо, но в данном конкретном месте побочные эффекты учтены.
      *
      * @param variant   версия релиза PostgreSQL
      * @param testClass класс JUnit теста для которого создаётся контейнер.
@@ -151,7 +151,7 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
      *
      * <p>Объект класса необходим для нахождения рабочего каталога тестов.
      *
-     * <p>squid:S1699 - В общем случае так делать не хорошо, но в данном конкретном месте побочные эффекты учнеты.
+     * <p>squid:S1699 - В общем случае так делать не хорошо, но в данном конкретном месте побочные эффекты учтены.
      *
      * @param testClass класс JUnit теста для которого создаётся контейнер.
      */

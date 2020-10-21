@@ -9,7 +9,7 @@
     <parent>
         <artifactId>base-root</artifactId>
         <groupId>com.github.javister.docker</groupId>
-        <version>2.6</version>
+        <version>2.7</version>
     </parent>
     
     <scm>
@@ -34,7 +34,7 @@
         <!-- Settings -->
         <docker.image.artifactId>javister-docker-postgresql</docker.image.artifactId>
         <!-- Dependency versions -->
-        <javister-docker-base.version>2.6</javister-docker-base.version>
+        <javister-docker-base.version>2.7</javister-docker-base.version>
         <postgresql.version>42.2.18</postgresql.version>
         <HikariCP-java6.version>2.3.13</HikariCP-java6.version>
     </properties>
