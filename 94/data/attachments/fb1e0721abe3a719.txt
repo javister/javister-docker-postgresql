@@ -1,0 +1,20 @@
+15:26:25.937 [34mINFO [0;39m - Creating container for image: javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.6-SNAPSHOT 
+15:26:26.850 [34mINFO [0;39m - Found docker client settings from environment 
+15:26:26.850 [34mINFO [0;39m - Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///var/run/docker.sock 
+15:26:27.084 [34mINFO [0;39m - Docker host IP address is localhost 
+15:26:27.130 [34mINFO [0;39m - Connected to docker: 
+  Server Version: 19.03.13+azure
+  API Version: 1.40
+  Operating System: Ubuntu 18.04.5 LTS
+  Total Memory: 6954 MB 
+15:26:27.175 [31mWARN [0;39m - Failure when attempting to lookup auth config (dockerImageName: testcontainersofficial/ryuk:0.3.0, configFile: /home/runner/.docker/config.json. Falling back to docker-java default behaviour. Exception message: /home/runner/.docker/config.json (No such file or directory) 
+15:26:28.988 [34mINFO [0;39m - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit 
+15:26:28.988 [34mINFO [0;39m - Checking the system... 
+15:26:28.989 [34mINFO [0;39m - ✔︎ Docker server version should be at least 1.6.0 
+15:26:29.291 [34mINFO [0;39m - ✔︎ Docker environment should have more than 2GB free disk space 
+15:26:29.292 [31mWARN [0;39m - Failure when attempting to lookup auth config (dockerImageName: javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.6-SNAPSHOT, configFile: /home/runner/.docker/config.json. Falling back to docker-java default behaviour. Exception message: /home/runner/.docker/config.json (No such file or directory) 
+15:26:30.973 [34mINFO [0;39m - Starting container with ID: 46a3ab22ae9fcd9d6c64230297bf04d2af889ba2b0dfefb74832c6469d6805ee 
+15:26:31.337 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.6-SNAPSHOT is starting: 46a3ab22ae9fcd9d6c64230297bf04d2af889ba2b0dfefb74832c6469d6805ee 
+15:26:46.877 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.6-SNAPSHOT started in PT20.944S 
+15:26:46.906 [34mINFO [0;39m - HikariCP pool HikariPool-0 is starting. 
+15:26:47.234 [34mINFO [0;39m - HikariCP pool HikariPool-0 is shutting down. 

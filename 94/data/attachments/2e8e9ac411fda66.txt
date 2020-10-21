@@ -1,0 +1,16 @@
+15:27:31.839 [34mINFO [0;39m - Creating container for image: javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.6-1.6-SNAPSHOT 
+15:27:31.865 [34mINFO [0;39m - Starting container with ID: 575ad521465ddcdc70af36a3bab0f3c8ec7f9601d16d6b081cd333926c12c293 
+15:27:32.207 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.6-1.6-SNAPSHOT is starting: 575ad521465ddcdc70af36a3bab0f3c8ec7f9601d16d6b081cd333926c12c293 
+15:27:37.350 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.6-1.6-SNAPSHOT started in PT5.511S 
+15:27:37.351 [34mINFO [0;39m - Executing database script from SimpleDB.sql 
+15:27:37.363 [34mINFO [0;39m - Executed database script from SimpleDB.sql in 12 ms. 
+15:27:37.363 [34mINFO [0;39m - HikariCP pool HikariPool-9 is starting. 
+15:27:37.374 [34mINFO [0;39m - HikariCP pool HikariPool-9 is shutting down. 
+15:27:37.385 [34mINFO [0;39m - HikariCP pool HikariPool-10 is starting. 
+15:27:37.391 [34mINFO [0;39m - HikariCP pool HikariPool-10 is shutting down. 
+15:27:37.395 [34mINFO [0;39m - HikariCP pool HikariPool-11 is starting. 
+15:27:37.402 [34mINFO [0;39m - HikariCP pool HikariPool-11 is shutting down. 
+15:27:37.405 [34mINFO [0;39m - HikariCP pool HikariPool-12 is starting. 
+15:27:37.413 [34mINFO [0;39m - HikariCP pool HikariPool-12 is shutting down. 
+15:27:37.415 [34mINFO [0;39m - HikariCP pool HikariPool-13 is starting. 
+15:27:37.420 [34mINFO [0;39m - HikariCP pool HikariPool-13 is shutting down. 
