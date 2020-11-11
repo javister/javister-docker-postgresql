@@ -1,0 +1,18 @@
+10:00:12.164 [34mINFO [0;39m - Creating container for image: javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.6-SNAPSHOT 
+10:00:12.975 [34mINFO [0;39m - Found docker client settings from environment 
+10:00:12.975 [34mINFO [0;39m - Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///var/run/docker.sock 
+10:00:13.158 [34mINFO [0;39m - Docker host IP address is localhost 
+10:00:13.198 [34mINFO [0;39m - Connected to docker: 
+  Server Version: 19.03.13+azure
+  API Version: 1.40
+  Operating System: Ubuntu 18.04.5 LTS
+  Total Memory: 6954 MB 
+10:00:15.318 [34mINFO [0;39m - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit 
+10:00:15.319 [34mINFO [0;39m - Checking the system... 
+10:00:15.319 [34mINFO [0;39m - ✔︎ Docker server version should be at least 1.6.0 
+10:00:15.700 [34mINFO [0;39m - ✔︎ Docker environment should have more than 2GB free disk space 
+10:00:17.202 [34mINFO [0;39m - Starting container with ID: 89aab4a1e3860edf42f4569c00539a70d9efd93ca4d69cc9f49ad3831f55be5c 
+10:00:17.514 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.6-SNAPSHOT is starting: 89aab4a1e3860edf42f4569c00539a70d9efd93ca4d69cc9f49ad3831f55be5c 
+10:00:33.071 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.6-SNAPSHOT started in PT20.911S 
+10:00:33.098 [34mINFO [0;39m - HikariCP pool HikariPool-0 is starting. 
+10:00:33.321 [34mINFO [0;39m - HikariCP pool HikariPool-0 is shutting down. 
