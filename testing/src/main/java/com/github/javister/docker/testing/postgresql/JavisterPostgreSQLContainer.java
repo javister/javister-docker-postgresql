@@ -14,6 +14,7 @@ import org.testcontainers.containers.Network;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.containers.output.Slf4jLogConsumer;
 import org.testcontainers.containers.wait.strategy.DockerHealthcheckWaitStrategy;
+import org.testcontainers.utility.DockerImageName;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,6 +42,7 @@ import static java.time.temporal.ChronoUnit.MINUTES;
 public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContainer<SELF>> extends PostgreSQLContainer<SELF> implements JavisterBaseContainer<SELF> {
     private static final Logger LOGGER = LoggerFactory.getLogger(JavisterPostgreSQLContainer.class);
     private static final String COMMAND_ERROR_PREFIX = "Executed command fails: ";
+    private static final String COMPATIBLE_FOR = "postgres";
 
     /**
      * Имя фейкового JDBC драйвера.
@@ -97,9 +99,10 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     @SuppressWarnings("unchecked")
     public JavisterPostgreSQLContainer(Variant variant) {
         super(
-                JavisterBaseContainer.getImageRepository(JavisterPostgreSQLContainer.class, variant.getValue()) +
+                DockerImageName.parse(JavisterBaseContainer.getImageRepository(JavisterPostgreSQLContainer.class, variant.getValue()) +
                         ":" +
-                        JavisterBaseContainer.getImageTag(JavisterPostgreSQLContainer.class, variant.getValue())
+                        JavisterBaseContainer.getImageTag(JavisterPostgreSQLContainer.class, variant.getValue()))
+                        .asCompatibleSubstituteFor(COMPATIBLE_FOR)
         );
         this.variant = variant;
         init(null);
@@ -117,9 +120,10 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     @SuppressWarnings("unchecked")
     public JavisterPostgreSQLContainer(Variant variant, File volumePath) {
         super(
-                JavisterBaseContainer.getImageRepository(JavisterPostgreSQLContainer.class, variant.getValue()) +
+                DockerImageName.parse(JavisterBaseContainer.getImageRepository(JavisterPostgreSQLContainer.class, variant.getValue()) +
                         ":" +
-                        JavisterBaseContainer.getImageTag(JavisterPostgreSQLContainer.class, variant.getValue())
+                        JavisterBaseContainer.getImageTag(JavisterPostgreSQLContainer.class, variant.getValue()))
+                        .asCompatibleSubstituteFor(COMPATIBLE_FOR)
         );
         this.variant = variant;
         init(volumePath);
@@ -138,9 +142,11 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     @SuppressWarnings("unchecked")
     public JavisterPostgreSQLContainer(Variant variant, Class<?> testClass) {
         super(
-                JavisterBaseContainer.getImageRepository(JavisterPostgreSQLContainer.class, variant.getValue()) +
+                DockerImageName.parse(JavisterBaseContainer.getImageRepository(JavisterPostgreSQLContainer.class, variant.getValue()) +
                         ":" +
-                        JavisterBaseContainer.getImageTag(JavisterPostgreSQLContainer.class, variant.getValue()));
+                        JavisterBaseContainer.getImageTag(JavisterPostgreSQLContainer.class, variant.getValue()))
+                        .asCompatibleSubstituteFor(COMPATIBLE_FOR)
+        );
         this.variant = variant;
         this.testClass = testClass;
         init(getTestVolumePath());
