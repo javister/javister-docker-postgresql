@@ -1,0 +1,20 @@
+17:57:58.282 [34mINFO [0;39m - HikariCP pool HikariPool-0 is starting. 
+17:57:58.429 [31mWARN [0;39m - Attempted to read Testcontainers configuration file at file:/home/runner/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /home/runner/.testcontainers.properties (No such file or directory) 
+17:57:58.432 [34mINFO [0;39m - Image name substitution will be performed by: DefaultImageNameSubstitutor (ConfigurationFileImageNameSubstitutor) 
+17:57:58.468 [34mINFO [0;39m - docker-machine executable was not found on PATH ([/opt/hostedtoolcache/jdk/8.0.275/x64/bin, /home/linuxbrew/.linuxbrew/bin, /home/linuxbrew/.linuxbrew/sbin, /opt/pipx_bin, /usr/share/rust/.cargo/bin, /home/runner/.config/composer/vendor/bin, /home/runner/.dotnet/tools, /snap/bin, /usr/local/sbin, /usr/local/bin, /usr/sbin, /usr/bin, /sbin, /bin, /usr/games, /usr/local/games, /snap/bin]) 
+17:57:59.416 [34mINFO [0;39m - Found Docker environment with local Unix socket (unix:///var/run/docker.sock) 
+17:57:59.421 [34mINFO [0;39m - Docker host IP address is localhost 
+17:57:59.467 [34mINFO [0;39m - Connected to docker: 
+  Server Version: 19.03.13+azure
+  API Version: 1.40
+  Operating System: Ubuntu 18.04.5 LTS
+  Total Memory: 6954 MB 
+17:58:01.514 [34mINFO [0;39m - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit 
+17:58:01.514 [34mINFO [0;39m - Checking the system... 
+17:58:01.515 [34mINFO [0;39m - ✔︎ Docker server version should be at least 1.6.0 
+17:58:01.754 [34mINFO [0;39m - ✔︎ Docker environment should have more than 2GB free disk space 
+17:58:01.965 [34mINFO [0;39m - Creating container for image: javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.7-SNAPSHOT 
+17:58:02.009 [34mINFO [0;39m - Starting container with ID: 4551f20a4ece0108cd1e1a5f4f20b947ae480a29a8a382e6f3bb2c5112c28cfd 
+17:58:02.366 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.7-SNAPSHOT is starting: 4551f20a4ece0108cd1e1a5f4f20b947ae480a29a8a382e6f3bb2c5112c28cfd 
+17:58:17.875 [34mINFO [0;39m - Container javister-docker-docker.bintray.io/javister/javister-docker-postgresql:9.5-1.7-SNAPSHOT started in PT19.47S 
+17:58:18.126 [34mINFO [0;39m - HikariCP pool HikariPool-0 is shutting down. 
