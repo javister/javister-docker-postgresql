@@ -1,7 +1,7 @@
 name: Check updates (v1.5)
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "* */24 * * *"
 env:
   VERSION: 1.5
 jobs:
