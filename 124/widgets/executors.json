@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://javister.github.io/javister-docker-postgresql",
+  "buildOrder" : 124,
+  "buildName" : "GitHub Actions Run #540957157",
+  "buildUrl" : "https://github.com/javister/javister-docker-postgresql/actions/runs/540957157",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://javister.github.io/javister-docker-postgresql/124/"
+} ]
