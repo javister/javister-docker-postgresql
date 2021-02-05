@@ -43,6 +43,14 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     private static final Logger LOGGER = LoggerFactory.getLogger(JavisterPostgreSQLContainer.class);
     private static final String COMMAND_ERROR_PREFIX = "Executed command fails: ";
     private static final String COMPATIBLE_FOR = "postgres";
+    private static final String SCHEMA_PUBLIC_ALREADY_EXISTS_THE_ONLY_WARNING =
+            "pg_restore: [archiver (db)] could not execute query: ERROR:  schema \"public\" already exists\n" +
+            "    Command was: CREATE SCHEMA public;\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "WARNING: errors ignored on restore: 1";
 
     /**
      * Имя фейкового JDBC драйвера.
@@ -175,7 +183,9 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
         }
         if (backupPath != null) {
             String name = new File(backupPath).getName();
-            this.withFileSystemBind(backupPath, "/config/postgres/backup/" + name, BindMode.READ_WRITE);
+            String internalPath = "/config/postgres/backup/" + name;
+            LOGGER.info("Монтируем бэкап БД в контейнер по пути " + internalPath);
+            this.withFileSystemBind(backupPath, internalPath, BindMode.READ_WRITE);
         }
         this.withLogConsumer(this.getLogConsumer());
     }
@@ -373,13 +383,17 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
      * @param fileName имя файла резервной копии (без пути к файлу)
      */
     public void restore(String fileName) throws IOException, InterruptedException {
+        LOGGER.info("Восстанавливаем бэкап БД " + fileName);
         checkBackupName(fileName);
         ExecResult execResult = this.execInContainer("pg-restore", fileName);
+        LOGGER.info("Восстанавление бэкапа БД завершилось с кодом " + execResult.getExitCode());
         if (execResult.getExitCode() != 0) {
-            throw new IllegalExecResultException(
-                    COMMAND_ERROR_PREFIX +
-                            (!execResult.getStderr().isEmpty() ? execResult.getStderr() : execResult.getStdout().replace("\n\n", "\n"))
-            );
+            String errorText = (!execResult.getStderr().isEmpty() ? execResult.getStderr() : execResult.getStdout().replace("\n\n", "\n"));
+            if (errorText.contains(SCHEMA_PUBLIC_ALREADY_EXISTS_THE_ONLY_WARNING)) {
+                LOGGER.info("Продолжаем работу. Единственное предупреждение \"schema public already exists\" не влияет на восстановление.");
+                return;
+            }
+            throw new IllegalExecResultException(COMMAND_ERROR_PREFIX + errorText);
         }
     }
 
