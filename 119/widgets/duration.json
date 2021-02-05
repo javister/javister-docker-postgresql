@@ -1,0 +1,361 @@
+[ {
+  "uid" : "a627ed2fb1346dec",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540738562,
+    "stop" : 1612540754386,
+    "duration" : 15824
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "713b3325ff43a67b",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540754438,
+    "stop" : 1612540770242,
+    "duration" : 15804
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7e1ae1a1aaa540c",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540609859,
+    "stop" : 1612540615952,
+    "duration" : 6093
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e1d1a676c0498266",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540591540,
+    "stop" : 1612540597652,
+    "duration" : 6112
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d6c51aaece7c772b",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540770280,
+    "stop" : 1612540786053,
+    "duration" : 15773
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "275ae1b18c0dc449",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540564473,
+    "stop" : 1612540580508,
+    "duration" : 16035
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "880c27f0816ed75f",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540482127,
+    "stop" : 1612540498154,
+    "duration" : 16027
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5e3260e7922e0d7e",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540666115,
+    "stop" : 1612540677351,
+    "duration" : 11236
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "783c25bc723de1c6",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540694003,
+    "stop" : 1612540710601,
+    "duration" : 16598
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5c680b438d7ade4a",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540616016,
+    "stop" : 1612540632603,
+    "duration" : 16587
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "80a3289189aeb968",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540603747,
+    "stop" : 1612540609845,
+    "duration" : 6098
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "78574abb9227045e",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540849572,
+    "stop" : 1612540860308,
+    "duration" : 10736
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "285c125a7c88e566",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540526568,
+    "stop" : 1612540532313,
+    "duration" : 5745
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3210d6f200b8d70b",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540786093,
+    "stop" : 1612540801884,
+    "duration" : 15791
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "54c54253943d8640",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540801936,
+    "stop" : 1612540817720,
+    "duration" : 15784
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76e35bcb75785dac",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540907922,
+    "stop" : 1612540918731,
+    "duration" : 10809
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "97faa086dbcf0b2",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540649357,
+    "stop" : 1612540666060,
+    "duration" : 16703
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7a011ab72f8bcac2",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540498189,
+    "stop" : 1612540509061,
+    "duration" : 10872
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "52fe0119fbd09608",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540833675,
+    "stop" : 1612540849529,
+    "duration" : 15854
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "567db4012525cba2",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540677367,
+    "stop" : 1612540693961,
+    "duration" : 16594
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "182f55b54ec48a46",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540632660,
+    "stop" : 1612540649302,
+    "duration" : 16642
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ae3cc9b4aa9e6b50",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540710654,
+    "stop" : 1612540727212,
+    "duration" : 16558
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "65cf80f41c0aefce",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540892046,
+    "stop" : 1612540907870,
+    "duration" : 15824
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "167a93fded337c88",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540727259,
+    "stop" : 1612540738464,
+    "duration" : 11205
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a0db0871afb87cb1",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540443429,
+    "stop" : 1612540465656,
+    "duration" : 22227
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e6f88cd45a3bf85d",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540597668,
+    "stop" : 1612540603709,
+    "duration" : 6041
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "53261ff8a64c9da8",
+  "name" : "PostgreSQL variant: V12",
+  "time" : {
+    "start" : 1612540580562,
+    "stop" : 1612540591490,
+    "duration" : 10928
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "65868057c670e36b",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540548416,
+    "stop" : 1612540564415,
+    "duration" : 15999
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1e0f72e45d0c1e87",
+  "name" : "PostgreSQL variant: V11",
+  "time" : {
+    "start" : 1612540520785,
+    "stop" : 1612540526545,
+    "duration" : 5760
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fd103e11241337b",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540876188,
+    "stop" : 1612540891993,
+    "duration" : 15805
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f7bbc34e00c5032e",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540817771,
+    "stop" : 1612540833629,
+    "duration" : 15858
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8532ac8a424dcf51",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540532359,
+    "stop" : 1612540548374,
+    "duration" : 16015
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a7d03054d6b3207",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540514945,
+    "stop" : 1612540520724,
+    "duration" : 5779
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6076931c2cd63e8f",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540509128,
+    "stop" : 1612540514921,
+    "duration" : 5793
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a53e02f108ab06e",
+  "name" : "PostgreSQL variant: V9_5",
+  "time" : {
+    "start" : 1612540860352,
+    "stop" : 1612540876146,
+    "duration" : 15794
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f6328a2d4ee6e67",
+  "name" : "PostgreSQL variant: V9_6",
+  "time" : {
+    "start" : 1612540465890,
+    "stop" : 1612540482073,
+    "duration" : 16183
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
