@@ -50,9 +50,9 @@
 
     <distributionManagement>
         <repository>
-            <id>bintray-javister</id>
-            <name>javister-dockertesting</name>
-            <url>https://api.bintray.com/maven/javister/dockertesting/javister-docker-postgresql/;publish=1</url>
+            <id>krista-maven-public</id>
+            <name>Artifactori-external-releases</name>
+            <url>https://artifactory.krista.ru/artifactory/javister-docker-postgresql</url>
         </repository>
     </distributionManagement>
 
@@ -60,17 +60,7 @@
         <repository>
             <id>central</id>
             <name>central</name>
-            <url>https://jcenter.bintray.com</url>
-        </repository>
-        <repository>
-            <id>bintray-javister-dockertesting</id>
-            <name>bintray</name>
-            <url>https://dl.bintray.com/javister/dockertesting</url>
-        </repository>
-        <repository>
-            <id>krista-oss</id>
-            <name>krista-oss</name>
-            <url>http://artifactory.krista.ru/artifactory/maven-krista-nexus-open-source</url>
+            <url>https://artifactory.krista.ru/artifactory/maven-public</url>
         </repository>
         <repository>
             <id>jitpack.io</id>
@@ -81,7 +71,7 @@
         <pluginRepository>
             <id>central</id>
             <name>central</name>
-            <url>https://jcenter.bintray.com</url>
+            <url>https://artifactory.krista.ru/artifactory/maven-public</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
