@@ -1,5 +1,5 @@
 ARG JAVISTER_BASE_VERSION
-FROM javister-docker-docker.bintray.io/javister/javister-docker-base:${JAVISTER_BASE_VERSION}
+FROM javister-ntp.artifactory-jcr.krista.ru/javister-docker-base:${JAVISTER_BASE_VERSION}
 MAINTAINER Viktor Verbitsky <vektory79@gmail.com>
 
 ARG PG_VERSION="11"
