@@ -8,13 +8,13 @@ set_listen_addresses() {
 
 chown -R ${PUSER}:${PUSER} "/config" || true
 
-# create folder structure and change ownership
+# create folder structure and change ownership
 if [[ ! -d  "${PGDATA}" ]]; then
 
     mkdir -p "${PGDATA}"
     chown -R ${PUSER}:${PUSER} "${PGDATA}"
 
-    # initialise empty database structure and change temporary ownership config files
+    # initialise empty database structure and change temporary ownership config files
     if [[ ! -d "${PGDATA}/${PG_VERSION}" ]]; then
         if [ "${LANG}" ]; then
             setuser ${PUSER} initdb --locale=${LANG}
