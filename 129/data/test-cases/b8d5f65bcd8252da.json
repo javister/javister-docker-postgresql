@@ -1,0 +1,265 @@
+{
+  "uid" : "b8d5f65bcd8252da",
+  "name" : "PostgreSQL variant: V12",
+  "fullName" : "com.github.javister.docker.testing.postgresql.DirectImageTests.withRestoreTest",
+  "historyId" : "cba5ea22da3f68e99c5061259a36585d",
+  "time" : {
+    "start" : 1612794745861,
+    "stop" : 1612794757015,
+    "duration" : 11154
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "fe9537f481a726a3",
+      "name" : "Stdout",
+      "source" : "fe9537f481a726a3.txt",
+      "type" : "text/plain",
+      "size" : 1139
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az32-553"
+  }, {
+    "name" : "thread",
+    "value" : "4479@fv-az32-553.ForkJoinPool-1-worker-1(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "testClass",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "withRestoreTest"
+  }, {
+    "name" : "suite",
+    "value" : "com.github.javister.docker.testing.postgresql.DirectImageTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 55,
+        "unknown" : 0,
+        "total" : 55
+      },
+      "items" : [ {
+        "uid" : "d8bcaf907237ed5a",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/128//#testresult/d8bcaf907237ed5a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612794623833,
+          "stop" : 1612794634984,
+          "duration" : 11151
+        }
+      }, {
+        "uid" : "51a9eb67b586934",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/127//#testresult/51a9eb67b586934",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612793979357,
+          "stop" : 1612793990408,
+          "duration" : 11051
+        }
+      }, {
+        "uid" : "b38fbefddb78cdbd",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/126//#testresult/b38fbefddb78cdbd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612790289723,
+          "stop" : 1612790300934,
+          "duration" : 11211
+        }
+      }, {
+        "uid" : "32f53e3577cb7f84",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/125//#testresult/32f53e3577cb7f84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612543536121,
+          "stop" : 1612543547259,
+          "duration" : 11138
+        }
+      }, {
+        "uid" : "a1abc3cc427716e0",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/124//#testresult/a1abc3cc427716e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612542838333,
+          "stop" : 1612542849442,
+          "duration" : 11109
+        }
+      }, {
+        "uid" : "a6a1ed83911582f3",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/121//#testresult/a6a1ed83911582f3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612541369870,
+          "stop" : 1612541380981,
+          "duration" : 11111
+        }
+      }, {
+        "uid" : "5e3260e7922e0d7e",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/119//#testresult/5e3260e7922e0d7e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612540666115,
+          "stop" : 1612540677351,
+          "duration" : 11236
+        }
+      }, {
+        "uid" : "6239d4e9655af86c",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/118//#testresult/6239d4e9655af86c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612540385469,
+          "stop" : 1612540396623,
+          "duration" : 11154
+        }
+      }, {
+        "uid" : "ca83fff5ebf8e86c",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/117//#testresult/ca83fff5ebf8e86c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612539411780,
+          "stop" : 1612539422990,
+          "duration" : 11210
+        }
+      }, {
+        "uid" : "bb24f679b8168a8f",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/116//#testresult/bb24f679b8168a8f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612528859693,
+          "stop" : 1612528870883,
+          "duration" : 11190
+        }
+      }, {
+        "uid" : "f8fb18770409a240",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/115//#testresult/f8fb18770409a240",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612505376702,
+          "stop" : 1612505387731,
+          "duration" : 11029
+        }
+      }, {
+        "uid" : "9bb6427bbeae4684",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/114//#testresult/9bb6427bbeae4684",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612298072853,
+          "stop" : 1612298084107,
+          "duration" : 11254
+        }
+      }, {
+        "uid" : "476d51f5ab79f388",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/113//#testresult/476d51f5ab79f388",
+        "status" : "passed",
+        "time" : {
+          "start" : 1610371103354,
+          "stop" : 1610371114801,
+          "duration" : 11447
+        }
+      }, {
+        "uid" : "9e4f1ebe893d113b",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/112//#testresult/9e4f1ebe893d113b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1610370890389,
+          "stop" : 1610370901594,
+          "duration" : 11205
+        }
+      }, {
+        "uid" : "c569d2d99275afb2",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/111//#testresult/c569d2d99275afb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1610370622545,
+          "stop" : 1610370633682,
+          "duration" : 11137
+        }
+      }, {
+        "uid" : "488daa203ca2ac15",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/110//#testresult/488daa203ca2ac15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608826230916,
+          "stop" : 1608826242164,
+          "duration" : 11248
+        }
+      }, {
+        "uid" : "cff27bc65019bc1",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/109//#testresult/cff27bc65019bc1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608811522945,
+          "stop" : 1608811534238,
+          "duration" : 11293
+        }
+      }, {
+        "uid" : "e541b54a153ba360",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/108//#testresult/e541b54a153ba360",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608752220824,
+          "stop" : 1608752237489,
+          "duration" : 16665
+        }
+      }, {
+        "uid" : "16121d54406c364a",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/107//#testresult/16121d54406c364a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608750088435,
+          "stop" : 1608750105310,
+          "duration" : 16875
+        }
+      }, {
+        "uid" : "47899f4a8d150f54",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/106//#testresult/47899f4a8d150f54",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608746653370,
+          "stop" : 1608746664627,
+          "duration" : 11257
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b8d5f65bcd8252da.json",
+  "parameterValues" : [ ]
+}
