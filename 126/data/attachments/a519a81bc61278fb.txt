@@ -1,0 +1,8 @@
+13:16:22.836 [34mINFO [0;39m - Creating container for image: javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.6-1.8-SNAPSHOT 
+13:16:22.857 [34mINFO [0;39m - Starting container with ID: 661e610fd6b8bd1305524caebe250a3dcafb6674aee61ea852f094db180e7c89 
+13:16:23.170 [34mINFO [0;39m - Container javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.6-1.8-SNAPSHOT is starting: 661e610fd6b8bd1305524caebe250a3dcafb6674aee61ea852f094db180e7c89 
+13:16:38.558 [34mINFO [0;39m - Container javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.6-1.8-SNAPSHOT started in PT15.722S 
+13:16:38.558 [34mINFO [0;39m - Executing database script from SimpleDB.sql 
+13:16:38.567 [34mINFO [0;39m - Executed database script from SimpleDB.sql in 9 ms. 
+13:16:38.568 [34mINFO [0;39m - HikariCP pool HikariPool-25 is starting. 
+13:16:38.578 [34mINFO [0;39m - HikariCP pool HikariPool-25 is shutting down. 
