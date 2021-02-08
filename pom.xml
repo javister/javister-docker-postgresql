@@ -52,7 +52,7 @@
         <repository>
             <id>krista-maven-public</id>
             <name>Artifactori-external-releases</name>
-            <url>https://artifactory.krista.ru/artifactory/javister-docker-postgresql</url>
+            <url>https://artifactory.krista.ru/artifactory/maven-javister-docker-postgresql</url>
         </repository>
     </distributionManagement>
 
