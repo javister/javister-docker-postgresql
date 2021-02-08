@@ -44,7 +44,7 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     private static final String COMMAND_ERROR_PREFIX = "Executed command fails: ";
     private static final String COMPATIBLE_FOR = "postgres";
     private static final String SCHEMA_PUBLIC_ALREADY_EXISTS_THE_ONLY_WARNING =
-            "pg_restore: [archiver (db)] could not execute query: ERROR:  schema \"public\" already exists\n" +
+            "could not execute query: ERROR:  schema \"public\" already exists\n" +
             "    Command was: CREATE SCHEMA public;\n" +
             "\n" +
             "\n" +
