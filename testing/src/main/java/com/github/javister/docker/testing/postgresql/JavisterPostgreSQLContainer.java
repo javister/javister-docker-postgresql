@@ -83,6 +83,7 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     private final Variant variant;
     private File volumePath;
     private String backupPath = null;
+    private String startupSqlScript;
 
     /**
      * Создаёт контейнер из образа
@@ -327,6 +328,17 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     }
 
     /**
+     * Добавляет SQL скрипт который нужно выполнить сразу после старта контейнера.
+     *
+     * @param startupSqlScript SQL скрипт который нужно выполнить сразу после старта контейнера.
+     * @return возвращает this для fluent API.
+     */
+    public SELF withStartupSqlScript(String startupSqlScript) {
+        this.startupSqlScript = startupSqlScript;
+        return self();
+    }
+
+    /**
      * Создаёт резервную копию БД с именем, заданным через {@link #withDatabaseName(String)}
      * (по умолчанию {@code system}).
      * <p>Имя файла резервной копии будет сформировано из текущих даты и времени <b>внутри контейнера</b>.
@@ -456,6 +468,13 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     @SuppressWarnings("java:S2142")
     public void start() {
         super.start();
+        if (startupSqlScript != null) {
+            try {
+                performQuery(startupSqlScript);
+            } catch (SQLException e) {
+                throw new IllegalStateException("Ошибка при выполнении startup sql скрипта");
+            }
+        }
         if (backupPath != null) {
             String name = new File(backupPath).getName();
             try {
