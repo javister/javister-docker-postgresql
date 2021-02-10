@@ -468,19 +468,21 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     @SuppressWarnings("java:S2142")
     public void start() {
         super.start();
-        if (startupSqlScript != null) {
-            try {
-                performQuery(startupSqlScript);
-            } catch (SQLException e) {
-                throw new IllegalStateException("Ошибка при выполнении startup sql скрипта");
-            }
-        }
         if (backupPath != null) {
             String name = new File(backupPath).getName();
             try {
                 restore(name);
             } catch (IOException | InterruptedException e) {
                 throw new IllegalExecResultException("Error on backup restoring", e);
+            }
+        }
+        // Внимание: не переносить до restore() иначе сломается выполнение скрипта CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+        if (startupSqlScript != null) {
+            LOGGER.info("Выполняем startup sql скрипт");
+            try {
+                performQuery(startupSqlScript);
+            } catch (SQLException e) {
+                throw new IllegalStateException("Ошибка при выполнении startup sql скрипта");
             }
         }
     }
