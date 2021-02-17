@@ -62,7 +62,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-          server-id: krista-maven-public
+          server-id: javister-ntp.artifactory-jcr.krista.ru
+#          server-id: krista-maven-public
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
       - uses: actions/checkout@v2
@@ -82,12 +83,12 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.KRISTA_REPO_USER }}
           MAVEN_PASSWORD: ${{ secrets.KRISTA_REPO_PASSWD }}
           MAVEN_OPTS: -Djansi.force=true
-      - name: Login to Krista Docker Registry
-        uses: docker/login-action@v1
-        with:
-          registry: javister-ntp.artifactory-jcr.krista.ru.
-          username: ${{ secrets.KRISTA_REPO_USER }}
-          password: ${{ secrets.KRISTA_REPO_PASSWD }}
+#      - name: Login to Krista Docker Registry
+#        uses: docker/login-action@v1
+#        with:
+#          registry: javister-ntp.artifactory-jcr.krista.ru
+#          username: ${{ secrets.KRISTA_REPO_USER }}
+#          password: ${{ secrets.KRISTA_REPO_PASSWD }}
       - name: Push Docker image
         run: mvn --no-transfer-progress -Dstyle.color=always -DforcePush -DskipTests clean verify
         env:
