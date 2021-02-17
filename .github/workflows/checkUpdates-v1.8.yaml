@@ -79,8 +79,14 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.KRISTA_REPO_USER }}
           MAVEN_PASSWORD: ${{ secrets.KRISTA_REPO_PASSWD }}
           MAVEN_OPTS: -Djansi.force=true
-      - name: Login to Bintray Javister
-        run: echo "${{ secrets.KRISTA_REPO_PASSWD }}" | docker login -u "${{ secrets.KRISTA_REPO_USER }}" --password-stdin javister-ntp.artifactory-jcr.krista.ru
+      - name: Login to Krista Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: javister-ntp.artifactory-jcr.krista.ru
+          username: ${{ secrets.KRISTA_REPO_USER }}
+          password: ${{ secrets.KRISTA_REPO_PASSWD }}
+#      - name: Login to Bintray Javister
+#        run: echo "${{ secrets.KRISTA_REPO_PASSWD }}" | docker login -u "${{ secrets.KRISTA_REPO_USER }}" --password-stdin javister-ntp.artifactory-jcr.krista.ru
       - name: Push Docker image
         run: mvn --no-transfer-progress -Dstyle.color=always -DforcePush -DskipTests clean verify
         env:
