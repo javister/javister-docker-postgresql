@@ -1,7 +1,7 @@
 name: Check updates (v1.8)
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "* */24 * * *"
 env:
   VERSION: 1.8
 jobs:
@@ -61,7 +61,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-          server-id: bintray-javister
+          server-id: krista-maven-public
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
       - uses: actions/checkout@v2
