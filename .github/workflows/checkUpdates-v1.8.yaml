@@ -1,7 +1,7 @@
 name: Check updates (v1.8)
 on:
   schedule:
-    - cron: "* */24 * * *"
+    - cron: "*/10 * * * *"
 env:
   VERSION: 1.8
 jobs:
@@ -67,12 +67,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: release-v${{ env.VERSION }}
-      - name: Fix DNS
-        run: |
-          cat /etc/resolv.conf
-          echo "" >> /etc/resolv.conf
-          echo "nameserver 8.8.4.4" >> /etc/resolv.conf
-          echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+#      - name: Fix DNS
+#        run: |
+#          cat /etc/resolv.conf
+#          echo "" >> /etc/resolv.conf
+#          echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+#          echo "nameserver 8.8.8.8" >> /etc/resolv.conf
       - name: Build and Check
         run: mvn --no-transfer-progress -Dstyle.color=always -Ddockerfile.build.noCache=true install
         env:
@@ -80,7 +80,7 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.KRISTA_REPO_PASSWD }}
           MAVEN_OPTS: -Djansi.force=true
       - name: Login to Bintray Javister
-        run: docker login -u ${{ secrets.KRISTA_REPO_USER }} -p ${{ secrets.KRISTA_REPO_PASSWD }} javister-ntp.artifactory-jcr.krista.ru
+        run: echo "${{ secrets.KRISTA_REPO_PASSWD }}" | docker login -u "${{ secrets.KRISTA_REPO_USER }}" --password-stdin javister-ntp.artifactory-jcr.krista.ru
       - name: Push Docker image
         run: mvn --no-transfer-progress -Dstyle.color=always -DforcePush -DskipTests clean verify
         env:
