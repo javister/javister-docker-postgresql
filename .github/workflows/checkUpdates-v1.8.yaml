@@ -82,7 +82,7 @@ jobs:
 #          username: ${{ secrets.KRISTA_REPO_USER }}
 #          password: ${{ secrets.KRISTA_REPO_PASSWD }}
       - name: Configure Docker authentication
-        run: echo "${{ secrets.DOCKER_LOGIN_CONFIG }}" > ~/.docker/config.json
+        run: echo '${{ secrets.DOCKER_LOGIN_CONFIG }}' > ~/.docker/config.json
       - name: Push Docker image
         run: mvn --no-transfer-progress -Dstyle.color=always -DforcePush -DskipTests clean verify
         env:
