@@ -1,0 +1,20 @@
+08:49:50.959 [34mINFO [0;39m - HikariCP pool HikariPool-0 is starting. 
+08:49:51.172 [31mWARN [0;39m - Attempted to read Testcontainers configuration file at file:/home/runner/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /home/runner/.testcontainers.properties (No such file or directory) 
+08:49:51.186 [34mINFO [0;39m - docker-machine executable was not found on PATH ([/opt/hostedtoolcache/jdk/8.0.282/x64/bin, /home/linuxbrew/.linuxbrew/bin, /home/linuxbrew/.linuxbrew/sbin, /opt/pipx_bin, /usr/share/rust/.cargo/bin, /home/runner/.config/composer/vendor/bin, /usr/local/.ghcup/bin, /home/runner/.dotnet/tools, /snap/bin, /usr/local/sbin, /usr/local/bin, /usr/sbin, /usr/bin, /sbin, /bin, /usr/games, /usr/local/games, /snap/bin]) 
+08:49:52.438 [34mINFO [0;39m - Found Docker environment with local Unix socket (unix:///var/run/docker.sock) 
+08:49:52.444 [34mINFO [0;39m - Docker host IP address is localhost 
+08:49:52.491 [34mINFO [0;39m - Connected to docker: 
+  Server Version: 20.10.3+azure
+  API Version: 1.41
+  Operating System: Ubuntu 20.04.2 LTS
+  Total Memory: 6954 MB 
+08:49:52.496 [34mINFO [0;39m - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor') 
+08:49:55.029 [34mINFO [0;39m - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit 
+08:49:55.030 [34mINFO [0;39m - Checking the system... 
+08:49:55.031 [34mINFO [0;39m - ✔︎ Docker server version should be at least 1.6.0 
+08:49:55.240 [34mINFO [0;39m - ✔︎ Docker environment should have more than 2GB free disk space 
+08:49:55.302 [34mINFO [0;39m - Creating container for image: javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.5-1.10 
+08:49:55.354 [34mINFO [0;39m - Starting container with ID: 2a91bd389ee7dd50d438f32874af014a07791d275b4e583932c8f565d5d98021 
+08:49:55.840 [34mINFO [0;39m - Container javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.5-1.10 is starting: 2a91bd389ee7dd50d438f32874af014a07791d275b4e583932c8f565d5d98021 
+08:50:11.265 [34mINFO [0;39m - Container javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.5-1.10 started in PT16.025S 
+08:50:11.483 [34mINFO [0;39m - HikariCP pool HikariPool-0 is shutting down. 
