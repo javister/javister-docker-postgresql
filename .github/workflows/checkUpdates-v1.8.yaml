@@ -7,7 +7,7 @@ env:
   VERSION: 1.8
 jobs:
   extractEnv:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     outputs:
       imageName: ${{ steps.meta.outputs.imageName }}
       imageTag: ${{ steps.meta.outputs.imageTag }}
@@ -24,7 +24,7 @@ jobs:
           echo "::set-output name=imageTag::$(xmlstarlet sel -N p=http://maven.apache.org/POM/4.0.0 -t -v "/p:project/p:properties/p:revision" pom.xml)"
 
   checkUpdates:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [extractEnv]
     outputs:
       doRebuild: ${{ steps.result.outputs.doRebuild }}
@@ -54,7 +54,7 @@ jobs:
           fi
 
   buildAndPush:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [checkUpdates]
     if: needs.checkUpdates.outputs.doRebuild == 'true'
     steps:
