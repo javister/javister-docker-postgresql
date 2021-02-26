@@ -1,8 +1,8 @@
 name: Check updates (v1.8)
 on:
   schedule:
-    - cron: "*/10 * * * *"
-#    - cron: "* */24 * * *"
+#    - cron: "*/10 * * * *"
+    - cron: "* */24 * * *"
 env:
   VERSION: 1.8
 jobs:
@@ -89,13 +89,13 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.KRISTA_REPO_USER }}
           MAVEN_PASSWORD: ${{ secrets.KRISTA_REPO_PASSWD }}
           MAVEN_OPTS: -Djansi.force=true
-      - name: Log configs
-        if: always()
-        run: |
-          sudo cat /etc/resolv.conf || true
-          sudo cat /etc/hosts || true
-          sudo cat /etc/docker/* || true
-          sudo cat ~/.docker/* || true
-          sudo cat /etc/systemd/system/docker.service.d/* || true
-          sudo cat /var/log/docker.log || true
-          sudo journalctl -b -1 --no-pager || true
+#      - name: Log configs
+#        if: always()
+#        run: |
+#          sudo cat /etc/resolv.conf || true
+#          sudo cat /etc/hosts || true
+#          sudo cat /etc/docker/* || true
+#          sudo cat ~/.docker/* || true
+#          sudo cat /etc/systemd/system/docker.service.d/* || true
+#          sudo cat /var/log/docker.log || true
+#          sudo journalctl -b -1 --no-pager || true
