@@ -1,8 +1,8 @@
 name: Check updates (v1.8)
 on:
   schedule:
-#    - cron: "*/10 * * * *"
-    - cron: "* */24 * * *"
+    - cron: "*/10 * * * *"
+#    - cron: "* */24 * * *"
 env:
   VERSION: 1.8
 jobs:
@@ -83,6 +83,8 @@ jobs:
 #          registry: javister-ntp.artifactory-jcr.krista.ru
 #          username: ${{ secrets.KRISTA_REPO_USER }}
 #          password: ${{ secrets.KRISTA_REPO_PASSWD }}
+      - name: Relax repo firewall pressure
+        run: sleep $((60 + $RANDOM % 60))
       - name: Push Docker image
         run: mvn --no-transfer-progress -Dstyle.color=always -DforcePush -DskipTests clean verify
         env:
