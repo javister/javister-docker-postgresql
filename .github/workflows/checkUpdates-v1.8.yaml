@@ -1,7 +1,8 @@
 name: Check updates (v1.8)
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "* */1 * * *"
+#    - cron: "*/10 * * * *"
 #    - cron: "* */24 * * *"
 env:
   VERSION: 1.8
@@ -84,7 +85,7 @@ jobs:
 #          username: ${{ secrets.KRISTA_REPO_USER }}
 #          password: ${{ secrets.KRISTA_REPO_PASSWD }}
       - name: Relax repo firewall pressure
-        run: sleep $((60 + $RANDOM % 60))
+        run: sleep $((600 + $RANDOM % 600))
       - name: Push Docker image
         run: mvn --no-transfer-progress -Dstyle.color=always -DforcePush -DskipTests clean verify
         env:
