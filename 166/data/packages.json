@@ -1,0 +1,485 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "com.github.javister.docker.testing.postgresql",
+    "children" : [ {
+      "name" : "JdbcImageTests",
+      "children" : [ {
+        "name" : "simpleTest",
+        "uid" : "6ba57088712c9ed3",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606013408,
+          "stop" : 1614606033750,
+          "duration" : 20342
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleTest",
+        "uid" : "53fbec9c3c08cd05",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606033982,
+          "stop" : 1614606050005,
+          "duration" : 16023
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleTest",
+        "uid" : "d2049c21be726d9a",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606050043,
+          "stop" : 1614606060655,
+          "duration" : 10612
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleTest",
+        "uid" : "1cea109d2cd6cf92",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606060705,
+          "stop" : 1614606071269,
+          "duration" : 10564
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleWithVolumeTest",
+        "uid" : "ff3aec6ad151c3c3",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606071330,
+          "stop" : 1614606088476,
+          "duration" : 17146
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleWithVolumeTest",
+        "uid" : "6ba6cbfa5c8244e6",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606088526,
+          "stop" : 1614606104310,
+          "duration" : 15784
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleWithVolumeTest",
+        "uid" : "5821a69510c9e72e",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606104360,
+          "stop" : 1614606114912,
+          "duration" : 10552
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleWithVolumeTest",
+        "uid" : "9728f1da7abcdda8",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606114949,
+          "stop" : 1614606125476,
+          "duration" : 10527
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "initDbTest",
+        "uid" : "55126c2c4225c297",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606125519,
+          "stop" : 1614606141192,
+          "duration" : 15673
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "initDbTest",
+        "uid" : "9141b05b063fcd78",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606141232,
+          "stop" : 1614606157023,
+          "duration" : 15791
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "initDbTest",
+        "uid" : "1e2eb508f9abdbce",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606157084,
+          "stop" : 1614606167672,
+          "duration" : 10588
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "initDbTest",
+        "uid" : "3cd1ec3b1fdd8177",
+        "parentUid" : "ff4b198bab3b3db409b097abb2bf14d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606167732,
+          "stop" : 1614606178321,
+          "duration" : 10589
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ff4b198bab3b3db409b097abb2bf14d4"
+    }, {
+      "name" : "DirectImageTests",
+      "children" : [ {
+        "name" : "simpleTest",
+        "uid" : "a521d25418f9ad48",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606178366,
+          "stop" : 1614606194201,
+          "duration" : 15835
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleTest",
+        "uid" : "114e3440f73c48d7",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606194218,
+          "stop" : 1614606205062,
+          "duration" : 10844
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleTest",
+        "uid" : "3895b8bc226bfec3",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606205107,
+          "stop" : 1614606215812,
+          "duration" : 10705
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "simpleTest",
+        "uid" : "abc32d44e3aadce3",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606215844,
+          "stop" : 1614606226575,
+          "duration" : 10731
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "nonResultingQueriesTest",
+        "uid" : "6ade6922fa11233b",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606226629,
+          "stop" : 1614606232369,
+          "duration" : 5740
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "nonResultingQueriesTest",
+        "uid" : "8a3a0c93073a6b20",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606232402,
+          "stop" : 1614606238073,
+          "duration" : 5671
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "nonResultingQueriesTest",
+        "uid" : "4ecc63e11ee3f293",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606238092,
+          "stop" : 1614606243760,
+          "duration" : 5668
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "nonResultingQueriesTest",
+        "uid" : "b1c6b501c58ca224",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606243807,
+          "stop" : 1614606249619,
+          "duration" : 5812
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "initDbTest",
+        "uid" : "57e7b126767a2fa1",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606249665,
+          "stop" : 1614606265621,
+          "duration" : 15956
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "initDbTest",
+        "uid" : "f5a751ea5616ceae",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606265672,
+          "stop" : 1614606281594,
+          "duration" : 15922
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "initDbTest",
+        "uid" : "7afc33f12c986411",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606281627,
+          "stop" : 1614606292457,
+          "duration" : 10830
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "initDbTest",
+        "uid" : "361cd5d30e3716a6",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606292501,
+          "stop" : 1614606303430,
+          "duration" : 10929
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "backupTest",
+        "uid" : "c349430fff08c6b4",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606303477,
+          "stop" : 1614606309512,
+          "duration" : 6035
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "backupTest",
+        "uid" : "5fc44c7ed7a59da8",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606309523,
+          "stop" : 1614606315464,
+          "duration" : 5941
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "backupTest",
+        "uid" : "acb71afe8b2a820f",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606315504,
+          "stop" : 1614606321469,
+          "duration" : 5965
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "backupTest",
+        "uid" : "55f7dfb9da13ff3c",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606321475,
+          "stop" : 1614606327418,
+          "duration" : 5943
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "withRestoreTest",
+        "uid" : "7123f2284ac0ef5c",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606327472,
+          "stop" : 1614606344075,
+          "duration" : 16603
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "withRestoreTest",
+        "uid" : "7f721ea081e3de38",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606344136,
+          "stop" : 1614606355622,
+          "duration" : 11486
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "withRestoreTest",
+        "uid" : "8de727e8333d9d6f",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606355669,
+          "stop" : 1614606366966,
+          "duration" : 11297
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "withRestoreTest",
+        "uid" : "c2a0126bb58407e5",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606367014,
+          "stop" : 1614606378082,
+          "duration" : 11068
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "restoreTest",
+        "uid" : "da9b0944caf04a03",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606378098,
+          "stop" : 1614606394582,
+          "duration" : 16484
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "restoreTest",
+        "uid" : "663ababd94950a37",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606394628,
+          "stop" : 1614606410919,
+          "duration" : 16291
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "restoreTest",
+        "uid" : "89a75745688f5e82",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606410970,
+          "stop" : 1614606422329,
+          "duration" : 11359
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "restoreTest",
+        "uid" : "4b3a23dd26d7b50d",
+        "parentUid" : "fa44ede13c0d0b732a488710f34df2ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606422380,
+          "stop" : 1614606433576,
+          "duration" : 11196
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fa44ede13c0d0b732a488710f34df2ac"
+    } ],
+    "uid" : "com.github.javister.docker.testing.postgresql"
+  } ],
+  "name" : "packages"
+}
