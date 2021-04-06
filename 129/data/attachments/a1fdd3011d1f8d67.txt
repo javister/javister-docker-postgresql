@@ -1,6 +1,0 @@
-14:34:51.747 [34mINFO [0;39m - HikariCP pool HikariPool-45 is starting. 
-14:34:51.764 [34mINFO [0;39m - Creating container for image: javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.6-1.9-SNAPSHOT 
-14:34:51.783 [34mINFO [0;39m - Starting container with ID: 07b636114dc4250f674e1de72ec7e99bac452b420ceb51f58c0b3fe1b76929ce 
-14:34:52.094 [34mINFO [0;39m - Container javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.6-1.9-SNAPSHOT is starting: 07b636114dc4250f674e1de72ec7e99bac452b420ceb51f58c0b3fe1b76929ce 
-14:35:07.457 [34mINFO [0;39m - Container javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:9.6-1.9-SNAPSHOT started in PT15.694S 
-14:35:07.465 [34mINFO [0;39m - HikariCP pool HikariPool-45 is shutting down. 
