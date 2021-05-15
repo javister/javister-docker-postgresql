@@ -11,6 +11,18 @@
     "total" : 36
   }
 }, {
+  "buildOrder" : 176,
+  "reportUrl" : "https://javister.github.io/javister-docker-postgresql/176/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 9,
+    "skipped" : 0,
+    "passed" : 27,
+    "unknown" : 0,
+    "total" : 36
+  }
+}, {
   "buildOrder" : 175,
   "reportUrl" : "https://javister.github.io/javister-docker-postgresql/175/",
   "reportName" : "Allure Report with history",
@@ -217,18 +229,6 @@
 }, {
   "buildOrder" : 155,
   "reportUrl" : "https://javister.github.io/javister-docker-postgresql/155/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "failed" : 0,
-    "broken" : 0,
-    "skipped" : 0,
-    "passed" : 36,
-    "unknown" : 0,
-    "total" : 36
-  }
-}, {
-  "buildOrder" : 154,
-  "reportUrl" : "https://javister.github.io/javister-docker-postgresql/154/",
   "reportName" : "Allure Report with history",
   "data" : {
     "failed" : 0,

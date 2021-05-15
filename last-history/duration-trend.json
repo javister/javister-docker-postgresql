@@ -3,6 +3,13 @@
   "reportUrl" : "https://javister.github.io/javister-docker-postgresql/176/",
   "reportName" : "Allure Report with history",
   "data" : {
+    "duration" : 5701229
+  }
+}, {
+  "buildOrder" : 176,
+  "reportUrl" : "https://javister.github.io/javister-docker-postgresql/176/",
+  "reportName" : "Allure Report with history",
+  "data" : {
     "duration" : 5673810
   }
 }, {
@@ -130,12 +137,5 @@
   "reportName" : "Allure Report with history",
   "data" : {
     "duration" : 480992
-  }
-}, {
-  "buildOrder" : 154,
-  "reportUrl" : "https://javister.github.io/javister-docker-postgresql/154/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "duration" : 423961
   }
 } ]
