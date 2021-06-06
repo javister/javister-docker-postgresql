@@ -1,0 +1,26 @@
+{
+  "total" : 2,
+  "items" : [ {
+    "uid" : "5f20b33ed9f796ff5cd5d9774510e3f3",
+    "name" : "com.github.javister.docker.testing.postgresql.DirectImageTests",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 6,
+      "skipped" : 0,
+      "passed" : 18,
+      "unknown" : 0,
+      "total" : 24
+    }
+  }, {
+    "uid" : "7ecfb2a6c901b0fe322bcbd373fb060a",
+    "name" : "com.github.javister.docker.testing.postgresql.JdbcImageTests",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 3,
+      "skipped" : 0,
+      "passed" : 9,
+      "unknown" : 0,
+      "total" : 12
+    }
+  } ]
+}
