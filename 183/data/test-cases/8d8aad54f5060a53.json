@@ -1,0 +1,77 @@
+{
+  "uid" : "8d8aad54f5060a53",
+  "name" : "v11()",
+  "fullName" : "ErrorProcessorTest.v11",
+  "historyId" : "b13e3f0f9ff9a452a0bfd1bb2e6147e5",
+  "time" : {
+    "start" : 1624451221161,
+    "stop" : 1624451221164,
+    "duration" : 3
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az206-916"
+  }, {
+    "name" : "thread",
+    "value" : "3856@fv-az206-916.ForkJoinPool-1-worker-1(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "ErrorProcessorTest"
+  }, {
+    "name" : "testClass",
+    "value" : "ErrorProcessorTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "v11"
+  }, {
+    "name" : "suite",
+    "value" : "ErrorProcessorTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "4cc1429f0c36c07c",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/182//#testresult/4cc1429f0c36c07c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1624443482823,
+          "stop" : 1624443482824,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8d8aad54f5060a53.json",
+  "parameterValues" : [ ]
+}

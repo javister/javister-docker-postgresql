@@ -1,0 +1,8 @@
+14:01:48.693 [34mINFO [0;39m - Creating container for image: javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:11-1.11 
+14:01:48.714 [34mINFO [0;39m - Starting container with ID: 43d80b05190cb1255952d8f49435adec84b1b1e3da4c26c8f6607294ddf48a72 
+14:01:49.028 [34mINFO [0;39m - Container javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:11-1.11 is starting: 43d80b05190cb1255952d8f49435adec84b1b1e3da4c26c8f6607294ddf48a72 
+14:01:59.224 [34mINFO [0;39m - Container javister-ntp.artifactory-jcr.krista.ru/javister-docker-postgresql:11-1.11 started in PT10.531S 
+14:01:59.224 [34mINFO [0;39m - Восстанавливаем бэкап БД test.backup 
+14:01:59.662 [34mINFO [0;39m - Восстанавление бэкапа БД завершилось с кодом 0 
+14:01:59.662 [34mINFO [0;39m - HikariCP pool HikariPool-40 is starting. 
+14:01:59.670 [34mINFO [0;39m - HikariCP pool HikariPool-40 is shutting down. 

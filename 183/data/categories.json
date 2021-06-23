@@ -1,0 +1,134 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Exception during pool initialization",
+      "children" : [ {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "e9b512e63cb93ec8",
+        "parentUid" : "3e1a7a988fbe9be994fdaa0390b36778",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624451226571,
+          "stop" : 1624451831131,
+          "duration" : 604560
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "ee15c47006dd6bbd",
+        "parentUid" : "3e1a7a988fbe9be994fdaa0390b36778",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624451868430,
+          "stop" : 1624452470227,
+          "duration" : 601797
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "69ae8a0f80758890",
+        "parentUid" : "3e1a7a988fbe9be994fdaa0390b36778",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624452507122,
+          "stop" : 1624453107592,
+          "duration" : 600470
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3e1a7a988fbe9be994fdaa0390b36778"
+    }, {
+      "name" : "Container startup failed",
+      "children" : [ {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "f97b134aaca5369a",
+        "parentUid" : "01ad759fdc26258e5c6e4d478c565f77",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624453139623,
+          "stop" : 1624453740003,
+          "duration" : 600380
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "8e0a1d02e2d5fe28",
+        "parentUid" : "01ad759fdc26258e5c6e4d478c565f77",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624453777677,
+          "stop" : 1624454378059,
+          "duration" : 600382
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "aa74145941877571",
+        "parentUid" : "01ad759fdc26258e5c6e4d478c565f77",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624454395464,
+          "stop" : 1624454995869,
+          "duration" : 600405
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "636ece89b34d03f1",
+        "parentUid" : "01ad759fdc26258e5c6e4d478c565f77",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624455033617,
+          "stop" : 1624455634020,
+          "duration" : 600403
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "26cb7c3a9e51b617",
+        "parentUid" : "01ad759fdc26258e5c6e4d478c565f77",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624455652246,
+          "stop" : 1624456252692,
+          "duration" : 600446
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "PostgreSQL variant: V9_5",
+        "uid" : "b7787e732c317150",
+        "parentUid" : "01ad759fdc26258e5c6e4d478c565f77",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624456291852,
+          "stop" : 1624456892249,
+          "duration" : 600397
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "01ad759fdc26258e5c6e4d478c565f77"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
