@@ -43,9 +43,6 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
     private static final Logger LOGGER = LoggerFactory.getLogger(JavisterPostgreSQLContainer.class);
     private static final String COMMAND_ERROR_PREFIX = "Executed command fails: ";
     private static final String COMPATIBLE_FOR = "postgres";
-    private static final String SCHEMA_PUBLIC_ALREADY_EXISTS_THE_ONLY_WARNING = "could not execute query:"
-            + " ERROR: schema \"public\" already exists Command was: CREATE SCHEMA public;"
-            + " WARNING: errors ignored on restore: 1";
 
     /**
      * Имя фейкового JDBC драйвера.
@@ -396,8 +393,9 @@ public class JavisterPostgreSQLContainer<SELF extends JavisterPostgreSQLContaine
         LOGGER.info("Восстанавление бэкапа БД завершилось с кодом " + execResult.getExitCode());
         if (execResult.getExitCode() != 0) {
             String errorText = (!execResult.getStderr().isEmpty() ? execResult.getStderr() : execResult.getStdout().replace("\n\n", "\n"));
-            if (errorText.replaceAll("\\s+", " ").contains(SCHEMA_PUBLIC_ALREADY_EXISTS_THE_ONLY_WARNING)) {
-                LOGGER.info("Продолжаем работу. Единственное предупреждение \"schema public already exists\" не влияет на восстановление.");
+            if (ErrorProcessor.canIgnoreError(errorText)) {
+                LOGGER.info("Продолжаем работу. Имеющиеся ошибки не влияют на восстановление бэкапа БД"
+                        + " или активирован режим пропуска ошибок. Ошибки восстановления (справочно):\n" + errorText);
                 return;
             }
             throw new IllegalExecResultException(COMMAND_ERROR_PREFIX + errorText);
