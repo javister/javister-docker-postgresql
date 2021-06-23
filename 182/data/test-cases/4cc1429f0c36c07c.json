@@ -1,0 +1,57 @@
+{
+  "uid" : "4cc1429f0c36c07c",
+  "name" : "v11()",
+  "fullName" : "ErrorProcessorTest.v11",
+  "historyId" : "b13e3f0f9ff9a452a0bfd1bb2e6147e5",
+  "time" : {
+    "start" : 1624443482823,
+    "stop" : 1624443482824,
+    "duration" : 1
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az177-643"
+  }, {
+    "name" : "thread",
+    "value" : "3743@fv-az177-643.ForkJoinPool-1-worker-1(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "ErrorProcessorTest"
+  }, {
+    "name" : "testClass",
+    "value" : "ErrorProcessorTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "v11"
+  }, {
+    "name" : "suite",
+    "value" : "ErrorProcessorTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4cc1429f0c36c07c.json",
+  "parameterValues" : [ ]
+}
