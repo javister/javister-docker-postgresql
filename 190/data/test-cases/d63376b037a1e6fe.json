@@ -1,0 +1,280 @@
+{
+  "uid" : "d63376b037a1e6fe",
+  "name" : "PostgreSQL variant: V9_5",
+  "fullName" : "com.github.javister.docker.testing.postgresql.JdbcImageTests.simpleWithVolumeTest",
+  "historyId" : "4be1241f5fa6df06a2c44d9ba97557b5",
+  "time" : {
+    "start" : 1630320702016,
+    "stop" : 1630321305479,
+    "duration" : 603463
+  },
+  "description" : "",
+  "status" : "broken",
+  "statusMessage" : "Exception during pool initialization",
+  "statusTrace" : "com.zaxxer.hikari.pool.PoolInitializationException: Exception during pool initialization\n\tat com.zaxxer.hikari.pool.BaseHikariPool.initializeConnections(BaseHikariPool.java:550)\n\tat com.zaxxer.hikari.pool.BaseHikariPool.<init>(BaseHikariPool.java:172)\n\tat com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:60)\n\tat com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:48)\n\tat com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)\n\tat com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.getDataSource(JavisterPostgreSQLContainer.java:555)\n\tat com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.getDataSource(JavisterPostgreSQLContainer.java:527)\n\tat com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.performQuery(JavisterPostgreSQLContainer.java:499)\n\tat com.github.javister.docker.testing.postgresql.JdbcImageTests.simpleWithVolumeTest(JdbcImageTests.java:38)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)\n\tat org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)\n\tat org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestTemplateMethod(InvocationInterceptor.java:149)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:92)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.submit(ForkJoinPoolHierarchicalTestExecutorService.java:118)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:212)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:192)\n\tat org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:139)\n\tat org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:107)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)\n\tat java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:440)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.Iterator.forEachRemaining(Iterator.java:116)\n\tat java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)\n\tat java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485)\n\tat java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:272)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)\n\tat java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485)\n\tat java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:272)\n\tat java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)\n\tat java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485)\n\tat org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:107)\n\tat org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:42)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:155)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:135)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:155)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:135)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat java.util.concurrent.RecursiveAction.exec(RecursiveAction.java:189)\n\tat java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)\n\tat java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)\n\tat java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)\n\tat java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)\nCaused by: org.testcontainers.containers.ContainerLaunchException: Container startup failed\n\tat org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:330)\n\tat org.testcontainers.containers.GenericContainer.start(GenericContainer.java:311)\n\tat com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.start(JavisterPostgreSQLContainer.java:463)\n\tat org.testcontainers.jdbc.ContainerDatabaseDriver.connect(ContainerDatabaseDriver.java:118)\n\tat com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:95)\n\tat com.zaxxer.hikari.pool.BaseHikariPool.addConnection(BaseHikariPool.java:444)\n\tat com.zaxxer.hikari.pool.BaseHikariPool.initializeConnections(BaseHikariPool.java:548)\n\t... 125 more\nCaused by: org.rnorth.ducttape.RetryCountExceededException: Retry limit hit with exception\n\tat org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:88)\n\tat org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:323)\n\t... 131 more\nCaused by: org.testcontainers.containers.ContainerLaunchException: Could not create/start container\n\tat org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:497)\n\tat org.testcontainers.containers.GenericContainer.lambda$doStart$0(GenericContainer.java:325)\n\tat org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:81)\n\t... 132 more\nCaused by: java.lang.IllegalStateException: Container exited with code 1\n\tat org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:469)\n\t... 134 more\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "broken",
+    "statusMessage" : "Exception during pool initialization",
+    "statusTrace" : "com.zaxxer.hikari.pool.PoolInitializationException: Exception during pool initialization\n\tat com.zaxxer.hikari.pool.BaseHikariPool.initializeConnections(BaseHikariPool.java:550)\n\tat com.zaxxer.hikari.pool.BaseHikariPool.<init>(BaseHikariPool.java:172)\n\tat com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:60)\n\tat com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:48)\n\tat com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)\n\tat com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.getDataSource(JavisterPostgreSQLContainer.java:555)\n\tat com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.getDataSource(JavisterPostgreSQLContainer.java:527)\n\tat com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.performQuery(JavisterPostgreSQLContainer.java:499)\n\tat com.github.javister.docker.testing.postgresql.JdbcImageTests.simpleWithVolumeTest(JdbcImageTests.java:38)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)\n\tat org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)\n\tat org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestTemplateMethod(InvocationInterceptor.java:149)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)\n\tat org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:92)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)\n\tat org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)\n\tat org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.submit(ForkJoinPoolHierarchicalTestExecutorService.java:118)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:212)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:192)\n\tat org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:139)\n\tat org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:107)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)\n\tat java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:440)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.Iterator.forEachRemaining(Iterator.java:116)\n\tat java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)\n\tat java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485)\n\tat java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:272)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)\n\tat java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)\n\tat java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485)\n\tat java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:272)\n\tat java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)\n\tat java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)\n\tat java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)\n\tat java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)\n\tat java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)\n\tat java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\n\tat java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485)\n\tat org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:107)\n\tat org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:42)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:155)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:135)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.executeNonConcurrentTasks(ForkJoinPoolHierarchicalTestExecutorService.java:155)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService.invokeAll(ForkJoinPoolHierarchicalTestExecutorService.java:135)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)\n\tat org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.compute(ForkJoinPoolHierarchicalTestExecutorService.java:185)\n\tat java.util.concurrent.RecursiveAction.exec(RecursiveAction.java:189)\n\tat java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)\n\tat java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)\n\tat java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)\n\tat java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)\nCaused by: org.testcontainers.containers.ContainerLaunchException: Container startup failed\n\tat org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:330)\n\tat org.testcontainers.containers.GenericContainer.start(GenericContainer.java:311)\n\tat com.github.javister.docker.testing.postgresql.JavisterPostgreSQLContainer.start(JavisterPostgreSQLContainer.java:463)\n\tat org.testcontainers.jdbc.ContainerDatabaseDriver.connect(ContainerDatabaseDriver.java:118)\n\tat com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:95)\n\tat com.zaxxer.hikari.pool.BaseHikariPool.addConnection(BaseHikariPool.java:444)\n\tat com.zaxxer.hikari.pool.BaseHikariPool.initializeConnections(BaseHikariPool.java:548)\n\t... 125 more\nCaused by: org.rnorth.ducttape.RetryCountExceededException: Retry limit hit with exception\n\tat org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:88)\n\tat org.testcontainers.containers.GenericContainer.doStart(GenericContainer.java:323)\n\t... 131 more\nCaused by: org.testcontainers.containers.ContainerLaunchException: Could not create/start container\n\tat org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:497)\n\tat org.testcontainers.containers.GenericContainer.lambda$doStart$0(GenericContainer.java:325)\n\tat org.rnorth.ducttape.unreliables.Unreliables.retryUntilSuccess(Unreliables.java:81)\n\t... 132 more\nCaused by: java.lang.IllegalStateException: Container exited with code 1\n\tat org.testcontainers.containers.GenericContainer.tryStart(GenericContainer.java:469)\n\t... 134 more\n",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2749699833b08c98",
+      "name" : "Stdout",
+      "source" : "2749699833b08c98.txt",
+      "type" : "text/plain",
+      "size" : 15152
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "fv-az209-420"
+  }, {
+    "name" : "thread",
+    "value" : "4378@fv-az209-420.ForkJoinPool-1-worker-1(11)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "com.github.javister.docker.testing.postgresql.JdbcImageTests"
+  }, {
+    "name" : "testClass",
+    "value" : "com.github.javister.docker.testing.postgresql.JdbcImageTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "simpleWithVolumeTest"
+  }, {
+    "name" : "suite",
+    "value" : "com.github.javister.docker.testing.postgresql.JdbcImageTests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 8,
+        "skipped" : 0,
+        "passed" : 98,
+        "unknown" : 0,
+        "total" : 106
+      },
+      "items" : [ {
+        "uid" : "d04ce2cb21122dca",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/184//#testresult/d04ce2cb21122dca",
+        "status" : "broken",
+        "statusDetails" : "Exception during pool initialization",
+        "time" : {
+          "start" : 1624452220710,
+          "stop" : 1624452822440,
+          "duration" : 601730
+        }
+      }, {
+        "uid" : "ee15c47006dd6bbd",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/183//#testresult/ee15c47006dd6bbd",
+        "status" : "broken",
+        "statusDetails" : "Exception during pool initialization",
+        "time" : {
+          "start" : 1624451868430,
+          "stop" : 1624452470227,
+          "duration" : 601797
+        }
+      }, {
+        "uid" : "14061e965786a0b",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/182//#testresult/14061e965786a0b",
+        "status" : "broken",
+        "statusDetails" : "Exception during pool initialization",
+        "time" : {
+          "start" : 1624444130906,
+          "stop" : 1624444732718,
+          "duration" : 601812
+        }
+      }, {
+        "uid" : "b36ae55660cb4af2",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/179//#testresult/b36ae55660cb4af2",
+        "status" : "broken",
+        "statusDetails" : "Exception during pool initialization",
+        "time" : {
+          "start" : 1622969669075,
+          "stop" : 1622970269508,
+          "duration" : 600433
+        }
+      }, {
+        "uid" : "9aef9d75ce87f206",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/177//#testresult/9aef9d75ce87f206",
+        "status" : "broken",
+        "statusDetails" : "Exception during pool initialization",
+        "time" : {
+          "start" : 1621676685066,
+          "stop" : 1621677285527,
+          "duration" : 600461
+        }
+      }, {
+        "uid" : "9b4cd54940949fde",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/176//#testresult/9b4cd54940949fde",
+        "status" : "broken",
+        "statusDetails" : "Exception during pool initialization",
+        "time" : {
+          "start" : 1621110953092,
+          "stop" : 1621111553503,
+          "duration" : 600411
+        }
+      }, {
+        "uid" : "ea2243ca8687605b",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/176//#testresult/ea2243ca8687605b",
+        "status" : "broken",
+        "statusDetails" : "Exception during pool initialization",
+        "time" : {
+          "start" : 1621073260473,
+          "stop" : 1621073860820,
+          "duration" : 600347
+        }
+      }, {
+        "uid" : "630dad0a9764015f",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/175//#testresult/630dad0a9764015f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619157597598,
+          "stop" : 1619157613405,
+          "duration" : 15807
+        }
+      }, {
+        "uid" : "842c492022abf388",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/173//#testresult/842c492022abf388",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618305818350,
+          "stop" : 1618305834186,
+          "duration" : 15836
+        }
+      }, {
+        "uid" : "4f5146f70de15eb1",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/172//#testresult/4f5146f70de15eb1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618305069729,
+          "stop" : 1618305085545,
+          "duration" : 15816
+        }
+      }, {
+        "uid" : "2f0133034d292cd0",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/171//#testresult/2f0133034d292cd0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617705264638,
+          "stop" : 1617705280345,
+          "duration" : 15707
+        }
+      }, {
+        "uid" : "9082ee0f630023f9",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/170//#testresult/9082ee0f630023f9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1617704329255,
+          "stop" : 1617704344964,
+          "duration" : 15709
+        }
+      }, {
+        "uid" : "d41bd4e1376d6361",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/168//#testresult/d41bd4e1376d6361",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616754535233,
+          "stop" : 1616754550931,
+          "duration" : 15698
+        }
+      }, {
+        "uid" : "5692b685ab6d15d",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/167//#testresult/5692b685ab6d15d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616753444519,
+          "stop" : 1616753460327,
+          "duration" : 15808
+        }
+      }, {
+        "uid" : "ff3aec6ad151c3c3",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/166//#testresult/ff3aec6ad151c3c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614606071330,
+          "stop" : 1614606088476,
+          "duration" : 17146
+        }
+      }, {
+        "uid" : "c9755692fabf70d0",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/165//#testresult/c9755692fabf70d0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614597732356,
+          "stop" : 1614597749571,
+          "duration" : 17215
+        }
+      }, {
+        "uid" : "b96b9e528def821b",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/163//#testresult/b96b9e528def821b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614353661574,
+          "stop" : 1614353678709,
+          "duration" : 17135
+        }
+      }, {
+        "uid" : "b9b26140ebae8d19",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/162//#testresult/b9b26140ebae8d19",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614341703271,
+          "stop" : 1614341720515,
+          "duration" : 17244
+        }
+      }, {
+        "uid" : "d7c0b08e2c7a2e04",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/161//#testresult/d7c0b08e2c7a2e04",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614338008984,
+          "stop" : 1614338030708,
+          "duration" : 21724
+        }
+      }, {
+        "uid" : "ed74216faec4b30b",
+        "reportUrl" : "https://javister.github.io/javister-docker-postgresql/160//#testresult/ed74216faec4b30b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614334220509,
+          "stop" : 1614334237756,
+          "duration" : 17247
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d63376b037a1e6fe.json",
+  "parameterValues" : [ ]
+}
